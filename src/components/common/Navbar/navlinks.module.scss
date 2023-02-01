@@ -42,6 +42,9 @@
   @include media(">=notebook") {
     z-index: var(--fs-z-index-below);
 
+    border-bottom: 1px solid #edeff1;
+    border-top: 1px solid #edeff1;
+
     > div {
       display: flex;
       align-items: center;
@@ -70,11 +73,18 @@
   [data-fs-navlinks-link] {
     display: block;
     width: 100%;
+    text-decoration: none !important;
+    padding: 20px 25px !important;
+    border-bottom: 4px solid #fff;
+
+    &:hover {
+      border-bottom: 4px solid #0082c3;
+    }
   }
 
   @include media(">=notebook") {
-    padding-top: var(--fs-navlinks-padding-top-notebook);
-    padding-bottom: var(--fs-navlinks-padding-bottom-notebook);
+    // padding-top: var(--fs-navlinks-padding-top-notebook);
+    // padding-bottom: var(--fs-navlinks-padding-bottom-notebook);
 
     [data-fs-navlinks-list] {
       display: flex;

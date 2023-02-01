@@ -8,6 +8,8 @@ import Button, {
 } from 'src/components/ui/Button'
 import Icon from 'src/components/ui/Icon'
 import Link from 'src/components/ui/Link'
+import LinkAyuda from 'src/components/ui/Link/LinkAyuda/LinkAyuda'
+import LinkTiendas from 'src/components/ui/Link/LinkTiendas/LinkTiendas'
 import Logo from 'src/components/ui/Logo'
 import { mark } from 'src/sdk/tests/mark'
 import { useUI } from 'src/sdk/ui/Provider'
@@ -78,6 +80,8 @@ function Navbar() {
               buttonTestId="store-input-mobile-button"
               onSearchClick={handlerExpandSearch}
             />
+            <LinkAyuda/>
+            <LinkTiendas/>
             <Suspense fallback={<ButtonSignInFallback />}>
               <ButtonSignIn />
             </Suspense>

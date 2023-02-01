@@ -19,9 +19,9 @@ function Layout({ children }: PropsWithChildren) {
 
   return (
     <>
-      <Alert icon="Bell" link={{ text: 'Buy now', to: '/office' }} dismissible>
+      {/* <Alert icon="Bell" link={{ text: 'Buy now', to: '/office' }} dismissible>
         Get 10% off today:&nbsp;<span>NEW10</span>
-      </Alert>
+      </Alert> */}
 
       <Navbar />
 

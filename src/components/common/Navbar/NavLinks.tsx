@@ -51,6 +51,7 @@ function NavLinks({ onClickLink, classes = '' }: NavLinksProps) {
                 variant="display"
                 href={href}
                 onClick={onClickLink}
+                
               >
                 {name}
               </Link>
