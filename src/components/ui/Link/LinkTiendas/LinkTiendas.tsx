@@ -6,7 +6,7 @@ function LinkTiendas (){
     return(
         <UILink
         data-fs-link
-        className={styles.fsLink}
+        className={`${styles.fsLink} ${'hidden-mobile'}`}
         >
             Tiendas
         </UILink>

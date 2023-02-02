@@ -74,7 +74,7 @@ function Navbar() {
               />
             )}
             <SearchInput
-              placeholder=""
+              placeholder="¡Encuentras más 60 deportes y más de 5.000 productos!"
               ref={searchMobileRef}
               testId="store-input-mobile"
               buttonTestId="store-input-mobile-button"

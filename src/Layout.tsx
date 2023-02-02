@@ -1,9 +1,11 @@
 import { lazy, Suspense } from 'react'
-import Alert from 'src/components/common/Alert'
+//import Alert from 'src/components/common/Alert'
+//import CarouselTop from 'src/components/ui/Carousel/CarouselTop/CarouselTop'
+//import CarouselProps from 'src/components/ui/Carousel/CarouselTop/CarouselTop'
 import Footer from 'src/components/common/Footer'
 import Navbar from 'src/components/common/Navbar'
 import Toast from 'src/components/common/Toast'
-import RegionalizationBar from 'src/components/regionalization/RegionalizationBar'
+//import RegionalizationBar from 'src/components/regionalization/RegionalizationBar'
 import { useUI } from 'src/sdk/ui/Provider'
 import type { PropsWithChildren } from 'react'
 
@@ -23,12 +25,14 @@ function Layout({ children }: PropsWithChildren) {
         Get 10% off today:&nbsp;<span>NEW10</span>
       </Alert> */}
 
+      {/* <CarouselTop /> */}
+
       <Navbar />
 
       <Toast />
 
       <main>
-        <RegionalizationBar classes="display-mobile" />
+        {/* <RegionalizationBar classes="display-mobile" /> */}
         {children}
       </main>
 

@@ -7,7 +7,7 @@ function LinkAyuda (){
     return(
         <UILink
         data-fs-link
-        className={styles.fsLink}
+        className={`${styles.fsLink} ${'hidden-mobile'}`}
         >
             Ayuda
         </UILink>
