@@ -72,6 +72,7 @@
     [data-fs-search-input] {
       width: 100%;
       padding: var(--fs-search-input-padding);
+      padding-left: 0;
       background-color: var(--fs-search-input-bkg-color);
       background-color: #f4f5f7;
       border: var(--fs-search-input-border-width) solid var(--fs-search-input-border-color);
@@ -83,6 +84,14 @@
       &:hover {
         border-color: var(--fs-search-input-border-color-hover);
         box-shadow: var(--fs-search-input-box-shadow);
+      }
+
+      &::placeholder {
+        font-size: 14px;
+      }
+
+      @include media("<=notebook") {
+        padding-right: 15px
       }
 
       @include input-focus-ring;
