@@ -46,10 +46,12 @@
 
   min-width: var(--fs-link-min-width);
   min-height: var(--fs-link-min-height);
-  padding: var(--fs-link-padding);
+  //padding: var(--fs-link-padding);
   text-decoration: var(--fs-link-text-decoration);
 
-  &:hover { text-decoration: var(--fs-link-text-decoration-hover); }
+  &:hover { 
+    text-decoration: var(--fs-link-text-decoration-hover); 
+  }
 
   &:visited { color: var(--fs-link-text-color-visited); }
 

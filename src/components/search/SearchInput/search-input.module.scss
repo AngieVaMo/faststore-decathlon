@@ -79,11 +79,15 @@
       border: none;
       border-radius: var(--fs-search-input-border-radius);
       border-radius: 8px;
-      transition: box-shadow var(--fs-search-input-transition-timing) var(--fs-search-input-transition-timing), border var(--fs-search-input-transition-timing) var(--fs-search-input-transition-function);
+      //transition: box-shadow var(--fs-search-input-transition-timing) var(--fs-search-input-transition-timing), border var(--fs-search-input-transition-timing) var(--fs-search-input-transition-function);
 
       &:hover {
-        border-color: var(--fs-search-input-border-color-hover);
-        box-shadow: var(--fs-search-input-box-shadow);
+        // border-color: var(--fs-search-input-border-color-hover);
+        // box-shadow: var(--fs-search-input-box-shadow);
+        background-color: white;
+        border: 1px solid rgba(0,130,195,.2);
+        box-shadow: 0 0 0 3px rgb(0 135 195 / 10%);
+        transition: all 0.5s ease;
       }
 
       &::placeholder {

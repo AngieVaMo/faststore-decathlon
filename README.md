@@ -383,7 +383,7 @@ List of classes used to create default page grid.
 
 ```scss
 .layout__content-full // Should be used for sections that are side to side, generally with a colored background.
-.layout__content // Should be used for sections that fit centered on the grid.
+. // Should be used for sections that fit centered on the grid.
 .layout__section // This class only adds default vertical margins for page sections.
 ```
 

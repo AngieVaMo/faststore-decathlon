@@ -9,7 +9,7 @@ function ButtonSignInFallback() {
       className="text__title-mini"
       variant="tertiary"
     >
-      <Icon name="User" width={18} height={18} weight="bold" />
+      <Icon name="User" width={22} height={22} weight="bold" />
       <span>{'Mi perfil'}</span>
     </ButtonLink>
   )

@@ -97,6 +97,8 @@
       display: grid;
       grid-template-columns: 1fr minmax(auto, 37.5rem) 1fr;
       grid-template-columns: 200px minmax(auto, 37.5rem) 50%;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
 
     [data-fs-navbar-button-menu] {
