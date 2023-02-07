@@ -291,6 +291,7 @@
       background-color: var(--fs-button-tertiary-bkg-color-hover);
       border-color: var(--fs-button-tertiary-border-color-hover);
       box-shadow: var(--fs-button-tertiary-shadow-hover);
+      
     }
 
     &:focus, &:focus-visible {
@@ -302,6 +303,9 @@
       color: var(--fs-button-tertiary-text-color-active);
       background-color: var(--fs-button-tertiary-bkg-color-active);
       border-color: var(--fs-button-tertiary-border-color-active);
+      color: #00111A;
+      background-color: #ffea28;
+      border-radius: 50%;
     }
 
     &[data-fs-button-inverse="true"] {
@@ -389,8 +393,18 @@
   }
 
   &[data-fs-button-link] {
-    &:hover { text-decoration: none; }
+    &:hover { 
+      text-decoration: none;
+      background-color: transparent; 
+    }
 
     &[data-button-disabled="true"] { pointer-events: none; }
+  }
+
+  &[data-fs-cart-toggle] {
+    &:hover {
+      background-color: #ffea28;
+      border-radius: 50%;
+    }
   }
 }

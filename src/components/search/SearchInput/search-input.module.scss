@@ -67,14 +67,37 @@
     background-color: #f4f5f7;
     border-radius: 8px;
 
+    &:hover {
+      background-color: #fff;
+      border: 1px solid rgba(0,130,195,.2);
+      box-shadow: 0 0 0 3px rgb(0 135 195 / 10%);
+      transition: all 0.5s ease;
+
+      [data-fs-button] {
+        background-color: transparent;
+      }
+
+      [data-fs-search-input] {
+        background-color: #fff;
+      }
+
+    }
+
     @include media(">=notebook") { height: var(--fs-search-input-height-desktop); }
+
+    @include media("<notebook") {
+      display: flex;
+      width: 95%;
+      margin: 0 auto;
+    }
 
     [data-fs-search-input] {
       width: 100%;
-      padding: var(--fs-search-input-padding);
+      //padding: var(--fs-search-input-padding);
+      padding-right: 8px ;
       padding-left: 0;
-      background-color: var(--fs-search-input-bkg-color);
-      background-color: #f4f5f7;
+      //background-color: var(--fs-search-input-bkg-color);
+      background-color: transparent;
       border: var(--fs-search-input-border-width) solid var(--fs-search-input-border-color);
       border: none;
       border-radius: var(--fs-search-input-border-radius);
@@ -85,9 +108,14 @@
         // border-color: var(--fs-search-input-border-color-hover);
         // box-shadow: var(--fs-search-input-box-shadow);
         background-color: white;
-        border: 1px solid rgba(0,130,195,.2);
-        box-shadow: 0 0 0 3px rgb(0 135 195 / 10%);
-        transition: all 0.5s ease;
+        // border: 1px solid rgba(0,130,195,.2);
+        // box-shadow: 0 0 0 3px rgb(0 135 195 / 10%);
+        // transition: all 0.5s ease;
+      }
+
+      &:focus-visible {
+        outline-offset: unset;
+        outline: none;
       }
 
       &::placeholder {
@@ -95,10 +123,11 @@
       }
 
       @include media("<=notebook") {
-        padding-right: 15px
+        padding: 0 5px 0 0
+
       }
 
-      @include input-focus-ring;
+      //@include input-focus-ring;
 
       [data-fs-search-input-dropdown-visible="true"] & {
         @include media(">=notebook") {
@@ -115,8 +144,8 @@
       width: var(--fs-search-input-button-width);
       height: var(--fs-search-input-button-height-mobile);
       padding: 0;
-      background-color: var(--fs-search-input-button-bkg-color);
-      background-color: #f4f5f7;
+      //background-color: var(--fs-search-input-button-bkg-color);
+      background-color: transparent;
       border: 0;
       border-radius: 8px;
 

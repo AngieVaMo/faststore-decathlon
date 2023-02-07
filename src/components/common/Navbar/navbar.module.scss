@@ -53,7 +53,9 @@
   transition: top var(--fs-navbar-transition-timing) var(--fs-navbar-transition-function);
 
   @include media("<notebook") {
-    height: var(--fs-navbar-height-mobile);
+    //height: var(--fs-navbar-height-mobile);
+    margin-top: 10px;
+    border-bottom: 1px solid #edeff1;
   }
 
   &[data-fs-navbar-scroll="down"] {
@@ -77,7 +79,7 @@
     order: 2;
 
     @include media("<notebook") {
-      
+      padding-bottom: 15px;
     }
   }
 
@@ -90,7 +92,6 @@
 
     @include media("<notebook") {
       padding: 0;
-      padding-top: 60px;
     }
 
     @include media(">=notebook") {
