@@ -294,10 +294,10 @@
       
     }
 
-    &:focus, &:focus-visible {
-      color: var(--fs-button-tertiary-text-color-hover);
-      background-color: var(--fs-button-tertiary-bkg-color-hover);
-    }
+    // &:focus, &:focus-visible {
+    //   color: var(--fs-button-tertiary-text-color-hover);
+    //   background-color: var(--fs-button-tertiary-bkg-color-hover);
+    // }
 
     &:active {
       color: var(--fs-button-tertiary-text-color-active);
@@ -389,6 +389,7 @@
       height: var(--fs-button-height);
       padding: var(--fs-button-icon-padding);
       border-width: 0;
+      
     }
   }
 

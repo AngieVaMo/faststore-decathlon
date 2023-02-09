@@ -72,7 +72,7 @@
   }
 
   &[data-fs-link-variant="display"] {
-    line-height: var(--fs-link-display-text-line-height);
+    //line-height: var(--fs-link-display-text-line-height);
     color: var(--fs-link-display-text-color);
 
     &:visited { color: var(--fs-link-display-text-color-visited); }
