@@ -88,6 +88,8 @@
   &[data-fs-link-variant="footer"] {
     font-size: var(--fs-link-footer-text-size);
     color: var(--fs-link-footer-text-color);
+    color: #707070;
+    font-size: 12px;
 
     @include media(">=notebook") { padding: var(--fs-link-footer-padding); }
   }

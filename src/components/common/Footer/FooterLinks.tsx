@@ -7,79 +7,127 @@ import styles from './footer.module.scss'
 
 const links = [
   {
-    title: 'Our company',
+    title: 'DECATHLON EMPRESA',
     items: [
       {
         href: '/',
-        name: 'About Us',
+        name: 'Donathlon',
       },
       {
         href: '/',
-        name: 'Our Blog',
+        name: 'Innovación',
       },
       {
         href: '/',
-        name: 'Stores',
+        name: 'Decathlon Sostenibilidad',
       },
       {
         href: '/',
-        name: 'Work With Us',
+        name: 'Fundación',
+      },
+      {
+        href: '/',
+        name: 'Decathlon Internacional',
+      },
+      {
+        href: '/',
+        name: 'Trabaja con Nosotros',
+      }
+    ],
+  },
+  {
+    title: 'COMPRA',
+    items: [
+      {
+        href: '/',
+        name: 'Métodos de Entrega',
+      },
+      {
+        href: '/',
+        name: 'Términos y condiciones fin de temporada',
+      },
+      {
+        href: '/',
+        name: 'Facturación Electrónica',
+      },
+      {
+        href: '/',
+        name: 'Política de Privacidad',
+      },
+      {
+        href: '/',
+        name: 'Términos y Condiciones',
+      },
+      {
+        href: '/',
+        name: 'Recoge en Tienda',
+      },
+      {
+        href: '/',
+        name: 'Guia de Tallas',
+      },
+      {
+        href: '/',
+        name: 'Términos y condiciones de venta intermediaria',
+      },
+      {
+        href: '/',
+        name: 'Términos y condiciones de recompra',
+      },
+      {
+        href: '/',
+        name: 'Tarjeta de Regalo',
+      }
+    ],
+  },
+  {
+    title: 'POST COMPRA',
+    items: [
+      {
+        href: '/',
+        name: 'Aviso de Seguridad',
+      },
+      {
+        href: '/',
+        name: 'Política de Devoluciones',
+      },
+      {
+        href: '/',
+        name: 'Derecho de Retracto',
+      },
+      {
+        href: '/',
+        name: 'SIC',
       },
     ],
   },
   {
-    title: 'Orders & Purchases',
+    title: 'EXPERIENCIA DECATHLON',
     items: [
       {
         href: '/',
-        name: 'Check Order Status',
+        name: 'Preguntas Frecuentes',
       },
       {
         href: '/',
-        name: 'Returns and Exchanges',
+        name: 'DECAPRO',
       },
       {
         href: '/',
-        name: 'Product Recall',
+        name: 'Tiendas',
       },
       {
         href: '/',
-        name: 'Gift Cards',
-      },
-    ],
-  },
-  {
-    title: 'Support & Services',
-    items: [
-      {
-        href: '/',
-        name: 'Support Center',
+        name: 'Club Decathlon',
       },
       {
         href: '/',
-        name: 'Schedule a Service',
+        name: 'Mi cuenta',
       },
       {
         href: '/',
-        name: 'Contact Us',
-      },
-    ],
-  },
-  {
-    title: 'Partnerships',
-    items: [
-      {
-        href: '/',
-        name: 'Affiliate Program',
-      },
-      {
-        href: '/',
-        name: 'Advertise with US',
-      },
-      {
-        href: '/',
-        name: 'Market Place',
-      },
+        name: 'Decathlon Actividades',
+      }
     ],
   },
 ]

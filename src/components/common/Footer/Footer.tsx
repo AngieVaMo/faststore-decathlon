@@ -2,7 +2,8 @@ import {
   List as UIList,
   PaymentMethods as UIPaymentMethods,
 } from '@faststore/ui'
-import Logo from 'src/components/ui/Logo'
+//import Logo from 'src/components/ui/Logo'
+import LogoFooter from 'src/components/ui/Logo/LogoFooter'
 import IncentivesFooter from 'src/components/sections/Incentives/IncentivesFooter'
 import Icon from 'src/components/ui/Icon'
 import Link from 'src/components/ui/Link'
@@ -44,10 +45,13 @@ export function Footer({
 
       <div data-fs-footer-nav className="layout__content">
         <FooterLinks />
+      </div>
 
+      <div data-fs-footer-note className="layout__content">
+      
         {sectionSocial && (
           <section data-fs-footer-social>
-            <p data-fs-footer-title>Follow us</p>
+            <p data-fs-footer-title>SÍGUENOS EN</p>
             <UIList variant="unordered">
               <li>
                 <Link
@@ -57,7 +61,7 @@ export function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon width="24px" height="24px" name="Facebook" />
+                  <Icon width="30px" height="30px" name="Facebook" />
                 </Link>
               </li>
               <li>
@@ -68,7 +72,7 @@ export function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon width="24px" height="24px" name="Instagram" />
+                  <Icon width="30px" height="30px" name="Instagram" />
                 </Link>
               </li>
               <li>
@@ -79,7 +83,7 @@ export function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon width="24px" height="24px" name="Pinterest" />
+                  <Icon width="30px" height="30px" name="Pinterest" />
                 </Link>
               </li>
               <li>
@@ -90,34 +94,30 @@ export function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon width="24px" height="24px" name="Twitter" />
+                  <Icon width="30px" height="30px" name="Twitter" />
                 </Link>
               </li>
             </UIList>
           </section>
         )}
-      </div>
-
-      <div data-fs-footer-note className="layout__content">
-        <Logo />
 
         {sectionPaymentMethods && (
           <UIPaymentMethods data-fs-footer-payment-methods>
-            <p data-fs-footer-title>Payment Methods</p>
+            <p data-fs-footer-title>MÉTODOS DE PAGO</p>
             <UIList>
               <li>
-                <Icon width="34px" height="24px" name="Visa" />
+                <Icon width="50px" height="30px" name="Visa" />
                 <SROnly text="Visa" />
               </li>
               <li>
-                <Icon width="34px" height="24px" name="Diners" />
+                <Icon width="50px" height="30px" name="Diners" />
                 <SROnly text="Diners Club" />
               </li>
               <li>
-                <Icon width="34px" height="24px" name="Mastercard" />
+                <Icon width="50px" height="30px" name="Mastercard" />
                 <SROnly text="Mastercard" />
               </li>
-              <li>
+              {/* <li>
                 <Icon width="34px" height="24px" name="EloCard" />
                 <SROnly text="Elo Card" />
               </li>
@@ -136,21 +136,38 @@ export function Footer({
               <li>
                 <Icon width="34px" height="24px" name="ApplePay" />
                 <SROnly text="Apple Pay" />
-              </li>
+              </li> */}
             </UIList>
           </UIPaymentMethods>
         )}
 
-        <div data-fs-footer-copyright className="text__legend">
-          <p>This website uses VTEX technology</p>
-          <p>
-            In-store price may vary. Prices and offers are subject to change.
-            2021 Store name. All rights reserved. Store is a trademark of Store
-            and its affiliated companies.
-          </p>
-          <address>Mount St, 000, New York / NY - 00000.</address>
+        <div data-fs-footer-payment-methods>
+          <p data-fs-footer-title>PASARELA DE PAGOS</p>
         </div>
       </div>
+      <div data-fs-footer-copyright className="text__legend">
+          <p>© 2023 Decathlon™. Todos los derechos reservados.</p>
+          {/* <p>© 2023 Decathlon™ Colombia SAS.</p>
+          <div>
+            <p>NIT 900868271-1</p>
+            <p>601 9187891</p>
+            <p>ecommerce.colombia@decathlon.com</p>
+            <p>Registro SIC: 900868271-1</p>
+          </div>
+          <p>
+            Productos importados para Colombia por Decathlon Colombia S.A.S Calle 147 #58c-95 Bogotá, Colombia
+          </p>
+          <address>Mount St, 000, New York / NY - 00000.</address> */}
+      </div>
+      <div data-fs-footer-bottom>
+
+        <div>
+          <p data-fs-footer-slogan>¡HACEMOS ACCESIBLE EL DEPORTE DE MANERA SOSTENIBLE, AL MAYOR NUMERO DE PERSONAS!</p>
+        </div>
+        <LogoFooter /> 
+
+      </div>
+      
     </footer>
   )
 }
