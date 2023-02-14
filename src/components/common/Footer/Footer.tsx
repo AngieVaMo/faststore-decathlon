@@ -42,6 +42,12 @@ export function Footer({
       className={`${styles.fsFooter} layout__content-full`}
     >
       {sectionIncentives && <IncentivesFooter />}
+      <div data-fs-footer-promises>
+        <div>
+
+        </div>
+        
+      </div>
 
       <div data-fs-footer-nav className="layout__content">
         <FooterLinks />
@@ -161,7 +167,7 @@ export function Footer({
       </div>
       <div data-fs-footer-bottom>
 
-        <div>
+        <div className="layout__content">
           <p data-fs-footer-slogan>¡HACEMOS ACCESIBLE EL DEPORTE DE MANERA SOSTENIBLE, AL MAYOR NUMERO DE PERSONAS!</p>
         </div>
         <LogoFooter /> 

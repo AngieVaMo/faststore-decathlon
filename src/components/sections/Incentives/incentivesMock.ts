@@ -28,28 +28,32 @@ export const incentivesMockHeader = [
 
 export const incentivesMockFooter = [
   {
-    icon: 'ShieldCheck',
-    firstLineText: 'Trusted',
-    secondLineText: 'by Safecon',
+    url: '~/static/promise1.svg',
+    title: 'Más de 60 deportes',
+    firstLineText: 'Encuentra más de 5.000 productos para hacer deporte en un solo lugar',
+    //secondLineText: 'by Safecon',
   },
   {
-    icon: 'Medal',
-    firstLineText: 'Quality',
-    secondLineText: 'Products',
+    url: '~/static/promise2.PNG',
+    title: 'Recoge en Tienda',
+    firstLineText: '¡Compra en decathlon.com.co y recoge tu pedido en 2 horas en tu tienda favorita!',
+    //secondLineText: 'Products',
   },
   {
-    icon: 'CircleWavyCheck',
-    firstLineText: '3-year',
-    secondLineText: 'Guarantee',
+    url: '~/static/promise3.PNG',
+    title: 'Cambios y Devoluciones',
+    firstLineText: 'Tienes 30 días para realizar tus cambios',
+    //secondLineText: 'Guarantee',
   },
   {
-    icon: 'Storefront',
-    firstLineText: 'Pickup',
-    secondLineText: 'Options',
+    url: '~/static/promise4.PNG',
+    title: 'Métodos de Entrega',
+    firstLineText: 'Conoce nuestros tiempos de \n entrega para las diferentes \n ciudades del país',
+    //secondLineText: 'Options',
   },
-  {
-    icon: 'Truck',
-    firstLineText: 'Free',
-    secondLineText: 'Shippping',
-  },
+  // {
+  //   url: 'Truck',
+  //   firstLineText: 'Free',
+  //   secondLineText: 'Shippping',
+  // },
 ]

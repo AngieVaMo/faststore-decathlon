@@ -6,8 +6,9 @@
 
   display: block;
   width: var(--fs-logo-width);
+  max-width: 100%;
   width: 290px;
-  height: 75;
+  height: 75px;
   min-height: var(--fs-spacing-6);
   background: var(--fs-logo-footer-img) no-repeat;
   background-position: center;
