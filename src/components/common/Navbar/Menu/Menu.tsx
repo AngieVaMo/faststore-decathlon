@@ -46,6 +46,15 @@ const categoryTree = [
                         "Estiramiento y equilibrio",
                         "Tonificación"
                     ]
+                },
+                {
+                    name: "Boxeo",
+                    children: [
+                        Guantes de boxeo
+                        Vendas y mitones
+                        Sacos y puching ball
+                        Protecciones
+                    ]
                 } 
             }
 

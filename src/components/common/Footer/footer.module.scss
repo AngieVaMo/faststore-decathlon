@@ -39,6 +39,22 @@
     padding-top: 0;
   }
 
+  [data-fs-footer-promises-container] {
+    background: linear-gradient(90deg,#004876,#176ea6,#0082c3,#176ea6,#004876);
+    min-height: 188px;
+    padding-top: 10px;
+    position: relative;
+    margin-top: 150px;
+  }
+
+  [data-fs-footer-promises] {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+  }
+
   [data-fs-logo] {
     background-position-y: var(--fs-spacing-0);
   }

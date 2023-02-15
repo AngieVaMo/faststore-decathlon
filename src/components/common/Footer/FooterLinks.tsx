@@ -44,19 +44,11 @@ const links = [
       },
       {
         href: '/',
-        name: 'Términos y condiciones fin de temporada',
-      },
-      {
-        href: '/',
         name: 'Facturación Electrónica',
       },
       {
         href: '/',
-        name: 'Política de Privacidad',
-      },
-      {
-        href: '/',
-        name: 'Términos y Condiciones',
+        name: 'Preguntas Frecuentes',
       },
       {
         href: '/',
@@ -68,24 +60,20 @@ const links = [
       },
       {
         href: '/',
-        name: 'Términos y condiciones de venta intermediaria',
-      },
-      {
-        href: '/',
-        name: 'Términos y condiciones de recompra',
-      },
-      {
-        href: '/',
         name: 'Tarjeta de Regalo',
       }
     ],
   },
   {
-    title: 'POST COMPRA',
+    title: 'LEGAL',
     items: [
       {
         href: '/',
         name: 'Aviso de Seguridad',
+      },
+      {
+        href: '/',
+        name: 'Política de Privacidad',
       },
       {
         href: '/',
@@ -97,6 +85,14 @@ const links = [
       },
       {
         href: '/',
+        name: 'Términos y Condiciones',
+      },
+      {
+        href: '/',
+        name: 'Términos y condiciones de venta intermediaria',
+      },
+      {
+        href: '/',
         name: 'SIC',
       },
     ],
@@ -104,10 +100,6 @@ const links = [
   {
     title: 'EXPERIENCIA DECATHLON',
     items: [
-      {
-        href: '/',
-        name: 'Preguntas Frecuentes',
-      },
       {
         href: '/',
         name: 'DECAPRO',

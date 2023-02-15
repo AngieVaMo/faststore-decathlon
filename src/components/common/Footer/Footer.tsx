@@ -41,10 +41,9 @@ export function Footer({
       data-fs-footer-payment-methods={sectionPaymentMethods}
       className={`${styles.fsFooter} layout__content-full`}
     >
-      {sectionIncentives && <IncentivesFooter />}
-      <div data-fs-footer-promises>
-        <div>
-
+      <div data-fs-footer-promises-container>
+        <div data-fs-footer-promises>
+        {sectionIncentives && <IncentivesFooter />}
         </div>
         
       </div>

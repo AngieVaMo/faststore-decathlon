@@ -43,6 +43,7 @@
     width: fit-content;
     overflow-x: auto;
     overflow-y: hidden;
+    background-color: #fff;
 
     @include media(">=notebook") {
       justify-content: center;
@@ -75,9 +76,11 @@
 
   [data-fs-incentive-title] {
     font-size: var(--fs-incentives-title-size);
+    font-size: 18px;
     font-weight: var(--fs-incentives-title-weight);
     line-height: var(--fs-incentives-title-line-height);
     color: var(--fs-incentives-title-color);
+    color: #242323
   }
 
   [data-fs-incentive-description] {
@@ -87,6 +90,7 @@
     color: var(--fs-incentives-description-color);
     //white-space: nowrap;
     margin: 12px 0;
+    color: #575D5E;
   }
 
   [data-fs-incentive-content] {

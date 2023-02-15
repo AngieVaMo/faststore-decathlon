@@ -4,6 +4,7 @@ import Icon from 'src/components/ui/Icon'
 import styles from './incentives.module.scss'
 
 interface Incentive {
+  icon: string
   url: string
   title?: string
   firstLineText: string
@@ -38,12 +39,13 @@ function Incentives({
         {incentives.map((incentive, index) => (
           <li key={String(index)}>
             <UIIncentive>
-              <Icon
+              {/* <Icon
                 data-fs-incentive-icon
-                name={incentive.url}
+                name={incentive.icon}
                 width={32}
                 height={32}
-              />
+              /> */}
+              <img src={incentive.url} />
               <div data-fs-incentive-content>
                 {incentive.title && (
                   <p data-fs-incentive-title>{incentive.title}</p>

@@ -1,3 +1,4 @@
+//import img from '../../../../static/promise1.PNG'
 export const incentivesMockHeader = [
   {
     icon: 'Truck',
@@ -28,13 +29,13 @@ export const incentivesMockHeader = [
 
 export const incentivesMockFooter = [
   {
-    url: '~/static/promise1.svg',
+    url: '../../../../static/brandless-negative.png',
     title: 'Más de 60 deportes',
     firstLineText: 'Encuentra más de 5.000 productos para hacer deporte en un solo lugar',
     //secondLineText: 'by Safecon',
   },
   {
-    url: '~/static/promise2.PNG',
+    url: '',
     title: 'Recoge en Tienda',
     firstLineText: '¡Compra en decathlon.com.co y recoge tu pedido en 2 horas en tu tienda favorita!',
     //secondLineText: 'Products',
@@ -52,7 +53,7 @@ export const incentivesMockFooter = [
     //secondLineText: 'Options',
   },
   // {
-  //   url: 'Truck',
+  //   icon: 'Truck',
   //   firstLineText: 'Free',
   //   secondLineText: 'Shippping',
   // },
