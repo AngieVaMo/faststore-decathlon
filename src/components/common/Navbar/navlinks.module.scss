@@ -40,7 +40,7 @@
   @include media("<notebook") { padding: 0; }
 
   @include media(">=notebook") {
-    z-index: var(--fs-z-index-below);
+    //z-index: var(--fs-z-index-below);
 
     border-bottom: 1px solid #edeff1;
     border-top: 1px solid #edeff1;
