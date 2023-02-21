@@ -43,9 +43,16 @@
     width: fit-content;
     overflow-x: auto;
     overflow-y: hidden;
+    background-color: #fff;
 
     @include media(">=notebook") {
       justify-content: center;
+      width: 1140px;
+      max-width: 100%;
+
+      >li {
+        width: 25%;
+      }
     }
   }
 
@@ -54,26 +61,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 250px;
+
+    >img {
+      margin-bottom: 15px;
+    }
 
     @include media("<notebook") {
       row-gap: var(--fs-spacing-0);
     }
 
     @include media(">=notebook") {
-      flex-direction: row;
+      //flex-direction: row;
 
       [data-fs-incentive-content] {
-        margin-left: var(--fs-spacing-2);
+        //margin-left: var(--fs-spacing-2);
         text-align: left;
+        text-align: center;
       }
     }
   }
 
   [data-fs-incentive-title] {
     font-size: var(--fs-incentives-title-size);
+    font-size: 18px;
     font-weight: var(--fs-incentives-title-weight);
     line-height: var(--fs-incentives-title-line-height);
     color: var(--fs-incentives-title-color);
+    color: #242323;
+    white-space: nowrap;
   }
 
   [data-fs-incentive-description] {
@@ -81,7 +97,9 @@
     font-size: var(--fs-incentives-description-size);
     line-height: var(--fs-incentives-description-line-height);
     color: var(--fs-incentives-description-color);
-    white-space: nowrap;
+    //white-space: nowrap;
+    margin: 12px 0;
+    color: #575D5E;
   }
 
   [data-fs-incentive-content] {
@@ -117,6 +135,7 @@
       padding-right: var(--fs-incentives-gap);
       margin-right: var(--fs-incentives-gap);
       border-right: var(--fs-incentives-border-width) solid var(--fs-incentives-border-color);
+      width: 25%;
     }
   }
 }

@@ -3,6 +3,7 @@ import type { AnchorHTMLAttributes } from 'react'
 import RegionalizationButton from 'src/components/regionalization/RegionalizationButton'
 import Link from 'src/components/ui/Link'
 import { mark } from 'src/sdk/tests/mark'
+import LinkUUnidades from 'src/components/ui/Link/LinkUUnidades/LinkUUnidades'
 
 import styles from './navlinks.module.scss'
 
@@ -57,6 +58,7 @@ function NavLinks({ onClickLink, classes = '' }: NavLinksProps) {
             </li>
           ))}
         </UIList>
+        <LinkUUnidades  />
       </div>
     </nav>
   )

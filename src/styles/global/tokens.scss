@@ -34,6 +34,14 @@ body {
   --fs-color-neutral-6                 : #5d666f;
   --fs-color-neutral-7                 : #171a1c;
 
+  --fs-text-color-footer-1 : #4e4e4e;
+  --fs-text-color-footer-3 : #999;
+  --fs-text-color-header : #242323;
+  --fs-text-color-home : #000;
+  --fs-text-color-home-down-1 : #575D5E;
+
+
+
   // HIERARCHY
   --fs-color-primary-text              : var(--fs-color-text-inverse);
   --fs-color-primary-bkg               : var(--fs-color-main-2);
@@ -111,7 +119,8 @@ body {
   // --------------------------------------------------------
 
   // FACE
-  --fs-text-face-body                  : -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+  // --fs-text-face-body                  : -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+  --fs-text-face-body                  : Roboto, Roboto Condensed, sans-serif;
   --fs-text-face-title                 : var(--fs-text-face-body);
 
   // WEIGHT

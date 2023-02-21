@@ -46,10 +46,12 @@
 
   min-width: var(--fs-link-min-width);
   min-height: var(--fs-link-min-height);
-  padding: var(--fs-link-padding);
+  //padding: var(--fs-link-padding);
   text-decoration: var(--fs-link-text-decoration);
 
-  &:hover { text-decoration: var(--fs-link-text-decoration-hover); }
+  &:hover { 
+    text-decoration: var(--fs-link-text-decoration-hover); 
+  }
 
   &:visited { color: var(--fs-link-text-color-visited); }
 
@@ -70,7 +72,7 @@
   }
 
   &[data-fs-link-variant="display"] {
-    line-height: var(--fs-link-display-text-line-height);
+    //line-height: var(--fs-link-display-text-line-height);
     color: var(--fs-link-display-text-color);
 
     &:visited { color: var(--fs-link-display-text-color-visited); }
@@ -86,6 +88,8 @@
   &[data-fs-link-variant="footer"] {
     font-size: var(--fs-link-footer-text-size);
     color: var(--fs-link-footer-text-color);
+    color: #707070;
+    font-size: 12px;
 
     @include media(">=notebook") { padding: var(--fs-link-footer-padding); }
   }

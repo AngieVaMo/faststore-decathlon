@@ -1,0 +1,21 @@
+@import "src/styles/scaffold";
+
+.fs-logo-footer {
+  --fs-logo-width      : 7rem;
+  --fs-logo-footer-img : url("~/static/logo-decathlon-white.png");
+
+  display: block;
+  width: var(--fs-logo-width);
+  max-width: 100%;
+  width: 290px;
+  height: 75px;
+  min-height: var(--fs-spacing-6);
+  background: var(--fs-logo-footer-img) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  margin: 0 auto;
+
+  @include media("<notebook") {
+    width: 120px;
+  }
+}

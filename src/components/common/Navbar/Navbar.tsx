@@ -1,13 +1,15 @@
 import { Suspense, useRef, useState } from 'react'
 import CartToggle from 'src/components/cart/CartToggle'
 import SearchInput from 'src/components/search/SearchInput'
-import type { SearchInputRef } from 'src/components/search/SearchInput'
+//import type { SearchInputRef } from 'src/components/search/SearchInput'
 import Button, {
   ButtonSignIn,
   ButtonSignInFallback,
 } from 'src/components/ui/Button'
 import Icon from 'src/components/ui/Icon'
 import Link from 'src/components/ui/Link'
+import LinkAyuda from 'src/components/ui/Link/LinkAyuda/LinkAyuda'
+import LinkTiendas from 'src/components/ui/Link/LinkTiendas/LinkTiendas'
 import Logo from 'src/components/ui/Logo'
 import { mark } from 'src/sdk/tests/mark'
 import { useUI } from 'src/sdk/ui/Provider'
@@ -20,14 +22,14 @@ import NavLinks from './NavLinks'
 function Navbar() {
   const scrollDirection = useScrollDirection()
   const { openNavbar, navbar: displayNavbar } = useUI()
-  const searchMobileRef = useRef<SearchInputRef>(null)
+  //const searchMobileRef = useRef<SearchInputRef>(null)
 
   const [searchExpanded, setSearchExpanded] = useState(false)
 
-  const handlerExpandSearch = () => {
-    setSearchExpanded(true)
-    searchMobileRef.current?.inputRef?.focus()
-  }
+  // const handlerExpandSearch = () => {
+  //   setSearchExpanded(true)
+  //   searchMobileRef.current?.inputRef?.focus()
+  // }
 
   return (
     <header
@@ -67,17 +69,19 @@ function Navbar() {
                 icon={<Icon name="CaretLeft" width={32} height={32} />}
                 onClick={() => {
                   setSearchExpanded(false)
-                  searchMobileRef.current?.resetSearchInput()
+                  //searchMobileRef.current?.resetSearchInput()
                 }}
               />
             )}
-            <SearchInput
-              placeholder=""
+            {/* <SearchInput
+              placeholder="¡Encuentras más 60 deportes y más de 5.000 productos!"
               ref={searchMobileRef}
               testId="store-input-mobile"
               buttonTestId="store-input-mobile-button"
               onSearchClick={handlerExpandSearch}
-            />
+            /> */}
+            <LinkAyuda/>
+            <LinkTiendas/>
             <Suspense fallback={<ButtonSignInFallback />}>
               <ButtonSignIn />
             </Suspense>

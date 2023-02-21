@@ -1,12 +1,19 @@
+@import "src/styles/scaffold";
+
 .fs-logo {
   --fs-logo-width      : 7rem;
-  --fs-logo-img        : url("~/static/brandless-neutral.png");
+  --fs-logo-img        : url("~/static/logo-decathlon-blue.png");
 
   display: block;
   width: var(--fs-logo-width);
+  width: 157px;
   height: 100%;
   min-height: var(--fs-spacing-6);
   background: var(--fs-logo-img) no-repeat;
   background-position: center;
   background-size: 100% auto;
+
+  @include media("<notebook") {
+    width: 120px;
+  }
 }

@@ -1,11 +1,13 @@
 import { lazy, Suspense } from 'react'
-import Alert from 'src/components/common/Alert'
+//import Alert from 'src/components/common/Alert'
+import { TopHeader } from 'src/components/ui/TopHeader'
 import Footer from 'src/components/common/Footer'
 import Navbar from 'src/components/common/Navbar'
 import Toast from 'src/components/common/Toast'
-import RegionalizationBar from 'src/components/regionalization/RegionalizationBar'
+//import RegionalizationBar from 'src/components/regionalization/RegionalizationBar'
 import { useUI } from 'src/sdk/ui/Provider'
 import type { PropsWithChildren } from 'react'
+
 
 import 'src/styles/pages/layout.scss'
 
@@ -19,16 +21,18 @@ function Layout({ children }: PropsWithChildren) {
 
   return (
     <>
-      <Alert icon="Bell" link={{ text: 'Buy now', to: '/office' }} dismissible>
+      {/* <Alert icon="Bell" link={{ text: 'Buy now', to: '/office' }} dismissible>
         Get 10% off today:&nbsp;<span>NEW10</span>
-      </Alert>
+      </Alert> */}
+
+      <TopHeader />
 
       <Navbar />
 
       <Toast />
 
       <main>
-        <RegionalizationBar classes="display-mobile" />
+        {/* <RegionalizationBar classes="display-mobile" /> */}
         {children}
       </main>
 

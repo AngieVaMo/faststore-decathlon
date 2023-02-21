@@ -33,11 +33,11 @@ main,
 .layout__content-full {
   width: 100%;
   padding-top: var(--fs-spacing-4);
-  padding-bottom: var(--fs-spacing-4);
+  //padding-bottom: var(--fs-spacing-4);
 
   @include media(">=notebook") {
     padding-top: var(--fs-grid-padding);
-    padding-bottom: var(--fs-grid-padding);
+    //padding-bottom: var(--fs-grid-padding);
   }
 }
 
@@ -78,3 +78,27 @@ main,
   height: 100%;
   object-fit: cover;
 }
+
+.layout__topHeader {
+  display: flex !important;
+  justify-content: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #fff;
+  background-color: #0082C3;
+
+  > div{
+    width: 250px;
+  }
+
+  > button {
+    display: none !important;
+  }
+}
+
+// .layout__topHeader > div {
+//   width: 350px;
+
+// }
