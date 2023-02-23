@@ -18,6 +18,8 @@ import useScrollDirection from 'src/sdk/ui/useScrollDirection'
 import styles from './navbar.module.scss'
 import NavbarSlider from './NavbarSlider'
 import NavLinks from './NavLinks'
+import Menu from './Menu/Menu'
+import MenuItems from './Menu/MenuItems'
 
 function Navbar() {
   const scrollDirection = useScrollDirection()
@@ -39,6 +41,11 @@ function Navbar() {
     >
       <section data-fs-navbar-header>
         <div className="layout__content" data-fs-navbar-row>
+          <div >
+             <Menu>
+               <MenuItems />
+             </Menu>
+          </div>
           {!searchExpanded && (
             <>
               <Button

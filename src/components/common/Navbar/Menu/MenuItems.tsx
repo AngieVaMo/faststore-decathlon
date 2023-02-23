@@ -1,4 +1,3 @@
-import { CategoryTree } from "@faststore/api/dist/platforms/vtex/clients/commerce/types/CategoryTree"
 import Dropdown, {
     DropdownButton,
     DropdownItem,
@@ -7,22 +6,25 @@ import Dropdown, {
 
 
 import style from './menu.module.scss'
+import SubMenu from "./SubMenu"
 
 
 type Props = {
-    categoryTree?: CategoryTree[]
+    data?: Array<CategoryTree>
 }
 
-type AnyLevel = {
+type CategoryTree = {
     name: string
-    children: []
+    children?: [ {
+        name: string
+        children: Array<Tree>
+    } ]
 }
 
-interface CategoryTree {
+type Tree = {
     name: string
-    children?: []
+    children?: string[]
 }
-
 
 const categoryTree = [
     {
@@ -149,7 +151,7 @@ const categoryTree = [
                     },
                     // {
                     //     name: "Barranquismo",
-                    //     children: []
+                    // //     children: []
                     // },
                     {
                         name: "Niños senderistas",
@@ -166,7 +168,7 @@ const categoryTree = [
                     },
                     // {
                     //     name: "Accesorios",
-                    //     children: []
+                    // //     children: []
                     // },
                     {
                         name: "Excursionismo",
@@ -318,7 +320,7 @@ const categoryTree = [
                     },
                     // {
                     //     name: "Triathlon",
-                    //     children: []
+                    // //     children: []
                     // },
                     {
                         name: "Accesorios para bicicleta",
@@ -338,19 +340,19 @@ const categoryTree = [
                 children: [
                     {
                         name: "Ropa",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Tenis",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Nutrición y recuperación",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Tecnología",
-                        children: []
+                        // children: []
                     },
 
                 ]
@@ -360,40 +362,40 @@ const categoryTree = [
                 children: [
                     {
                         name: "Fútbol",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Fútbol sala",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Baloncesto",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Voleyball y voley playa",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Rugby",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Baseball",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Fútbol americano",
-                        children: []
+                        // children: []
                     },
                     {
                         name: "Clubs y tendencias",
-                        children: []
+                        // children: []
                     },
 
                     {
                         name: "Otros deportes",
-                        children: []
+                        // children: []
                     },
                 ]
             },
@@ -559,28 +561,27 @@ const categoryTree = [
 ]
 
 
-export default function Menu ({categoryTree}: Props) {
-
+export default function MenuItems ({data=categoryTree}) {
 
     return (
         <div data-fs-Menu className={style.fsMenu}>
-            {categoryTree?.map((name, children, index) => {
+            {data?.map(({name, children}, index) => (
                 <>
-                <Dropdown>
+                <Dropdown key={index}>
                     <DropdownButton>
                         {name}
                     </DropdownButton>
                     <DropdownMenu>
                         <div>
                             <DropdownItem>
-                                <SubMenu></SubMenu>
+                                {children && <SubMenu categoryTree={children}/>}
                             </DropdownItem>
                         </div>
                         
                     </DropdownMenu>
                 </Dropdown>
                 </>
-            })}
+            ))}
         </div>
     )
 }

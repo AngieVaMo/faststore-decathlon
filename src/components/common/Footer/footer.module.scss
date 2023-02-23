@@ -81,6 +81,7 @@
 
     @include media("<notebook") {
       flex-direction: column;
+      padding: 0;
     }
 
     @include media(">=notebook") {
@@ -294,22 +295,37 @@
   }
   
   [data-fs-footer-slogan] {
+    font-size: 19px;
+    margin-bottom: 15px;
     color: #fff;
-    font-size: 35px;
     font-style: italic;
-    line-height: 45px;
-    margin-bottom: 30px;
     text-align: center;
+    line-height: 25px;
+
+    @include media(">=notebook") {
+      font-size: 35px;
+      margin-bottom: 30px;
+      line-height: 45px;
+    }
   }
 
   [data-fs-footer-bottom] {
-    padding: 75px 0 ;
+    padding: 40px 0 0 0;
     background: radial-gradient(#0082c3,#176ea6,#004876);
+    margin-top: 20px;
 
     >div {
-      
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
+      padding: 0;
+
+      @include media(">=notebook") {
+        width: 90%;
+      }
+    }
+
+    @include media(">=notebook") {
+      padding: 75px 0 ;
     }
   }
 }
