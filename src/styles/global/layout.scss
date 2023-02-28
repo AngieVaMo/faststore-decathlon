@@ -11,6 +11,10 @@ body {
   min-height: 100vh;
   color: var(--fs-color-text);
   background: var(--fs-body-bkg);
+
+  > iframe {
+    background-color: transparent !important;
+  }
 }
 
 main,

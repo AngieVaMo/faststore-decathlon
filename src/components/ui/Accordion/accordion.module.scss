@@ -41,10 +41,18 @@
     justify-content: space-between;
     width: 100%;
     padding: var(--fs-accordion-item-button-padding);
+    padding-right: 27px;
+    padding-left: 15px;
     color: var(--fs-accordion-item-button-color);
     cursor: pointer;
     background-color: var(--fs-accordion-item-button-bkg-color);
     border: 0;
+
+    color: #4e4e4e;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+
   }
 
   [data-fs-accordion-item-button-icon] {
@@ -61,5 +69,6 @@
 
   [data-fs-accordion-item-panel] {
     padding-bottom: var(--fs-accordion-item-panel-padding-bottom);
+    padding-left: 15px;
   }
 }

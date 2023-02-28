@@ -1,33 +1,4 @@
-//import { useEffect } from "react"
-import categoryTree2 from './categoryTree.json'
-import Dropdown, {
-    DropdownButton,
-    DropdownItem,
-    DropdownMenu
-} from "src/components/common/Dropdown"
-import LinkUUnidades from 'src/components/ui/Link/LinkUUnidades'
-
-
-import style from './menu.module.scss'
-import SubMenu from "./SubMenu"
-
-console.log("ARBOL DE CATEGORIAS: ", categoryTree2)
-
-type Props = {
-    data?: Array<Tree>
-}
-
-export interface Category {
-    name: string;
-    children: any[];
-}
-
-interface Tree {
-    name: string;
-    children: Category[];
-}
-
-const categoryTree = [
+[
     {
         "name": "Deportes",
         "children": [
@@ -440,304 +411,52 @@ const categoryTree = [
         "name": "hombre",
         "children": [
             {
-                "name": "ropa deportiva",
+                "name": "chaquetas",
                 "children": [
-                    {
-                        "name": "chaquetas",
-                        "children": []
-                    },
-                    {
-                        "name": "camisetas",
-                        "children": []
-                    },
-                    {
-                        "name": "buzos",
-                        "children": []
-                    },
-                    {
-                        "name": "pantalones",
-                        "children": []
-                    }
+                    "Impermeables",
+                    "Chaquetas rompe vientos"
+                ]
+            },
+            {
+                "name": "camisetas",
+                "children": [
+                    "Camisetas manga larga",
+                    "Camisetas manga corta",
+                    "Camisetas sin mangas",
+                    "Camisas polo",
+                    "Camisetas protección solar"
+                ]
+            },
+            {
+                "name": "buzos/sacos",
+                "children": [
+                    "Sacos",
+                    "Buzos con capucha",
+                    "Chalecos"
+                ]
+            },
+            {
+                "name": "pantalones",
+                "children": [
+                    "Impermeables",
+                    "Chaquetas rompe vientos",
+                    "Licras",
+                    "Sudaderas y Joggers",
+                    "Pantalonetas y Bermudas"
+                ]
+            },
+            {
+                "name": "ropa interior deportiva",
+                "children": [
 
                 ]
             },
             {
-                "name": "zapatos deportivos",
+                "name": "plus size",
                 "children": [
-                    {
-                        "name": "tenis deportivos",
-                        "children": []
-                    },
-                    {
-                        "name": "senderismo",
-                        "children": []
-                    },
-                    {
-                        "name": "botas",
-                        "children": []
-                    },
-                    {
-                        "name": "playa y natación",
-                        "children": []
-                    }
-                ]
-            },
-            {
-                "name": "para la playa",
-                "children": [
-                    {
-                        "name": "trajes de baño",
-                        "children": []
-                    },
-                    {
-                        "name": "ropa playa",
-                        "children": []
-                    },
-                    {
-                        "name": "calzado playa",
-                        "children": []
-                    },
-                    {
-                        "name": "protección UV",
-                        "children": []
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "niños y bebés",
-        "children": [
-            {
-                "name": "ropa deportiva",
-                "children": [
-                    {
-                        "name": "chaquetas",
-                        "children": []
-                    },
-                    {
-                        "name": "camisetas",
-                        "children": []
-                    },
-                    {
-                        "name": "buzos",
-                        "children": []
-                    },
-                    {
-                        "name": "pantalones",
-                        "children": []
-                    }
 
                 ]
-            },
-            {
-                "name": "zapatos deportivos",
-                "children": [
-                    {
-                        "name": "tenis deportivos",
-                        "children": []
-                    },
-                    {
-                        "name": "senderismo",
-                        "children": []
-                    },
-                    {
-                        "name": "botas",
-                        "children": []
-                    },
-                    {
-                        "name": "playa y natación",
-                        "children": []
-                    }
-                ]
-            },
-            {
-                "name": "para la playa",
-                "children": [
-                    {
-                        "name": "trajes de baño",
-                        "children": []
-                    },
-                    {
-                        "name": "ropa playa",
-                        "children": []
-                    },
-                    {
-                        "name": "calzado playa",
-                        "children": []
-                    },
-                    {
-                        "name": "protección UV",
-                        "children": []
-                    }
-                ]
             }
         ]
-    },
-    {
-        "name": "accesorios",
-        "children": [
-            {
-                "name": "ropa deportiva",
-                "children": [
-                    {
-                        "name": "chaquetas",
-                        "children": []
-                    },
-                    {
-                        "name": "camisetas",
-                        "children": []
-                    },
-                    {
-                        "name": "buzos",
-                        "children": []
-                    },
-                    {
-                        "name": "pantalones",
-                        "children": []
-                    }
-
-                ]
-            },
-            {
-                "name": "zapatos deportivos",
-                "children": [
-                    {
-                        "name": "tenis deportivos",
-                        "children": []
-                    },
-                    {
-                        "name": "senderismo",
-                        "children": []
-                    },
-                    {
-                        "name": "botas",
-                        "children": []
-                    },
-                    {
-                        "name": "playa y natación",
-                        "children": []
-                    }
-                ]
-            },
-            {
-                "name": "para la playa",
-                "children": [
-                    {
-                        "name": "trajes de baño",
-                        "children": []
-                    },
-                    {
-                        "name": "ropa playa",
-                        "children": []
-                    },
-                    {
-                        "name": "calzado playa",
-                        "children": []
-                    },
-                    {
-                        "name": "protección UV",
-                        "children": []
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "colecciones",
-        "children": [
-            {
-                "name": "ropa deportiva",
-                "children": [
-                    {
-                        "name": "chaquetas",
-                        "children": []
-                    },
-                    {
-                        "name": "camisetas",
-                        "children": []
-                    },
-                    {
-                        "name": "buzos",
-                        "children": []
-                    },
-                    {
-                        "name": "pantalones",
-                        "children": []
-                    }
-
-                ]
-            },
-            {
-                "name": "zapatos deportivos",
-                "children": [
-                    {
-                        "name": "tenis deportivos",
-                        "children": []
-                    },
-                    {
-                        "name": "senderismo",
-                        "children": []
-                    },
-                    {
-                        "name": "botas",
-                        "children": []
-                    },
-                    {
-                        "name": "playa y natación",
-                        "children": []
-                    }
-                ]
-            },
-            {
-                "name": "para la playa",
-                "children": [
-                    {
-                        "name": "trajes de baño",
-                        "children": []
-                    },
-                    {
-                        "name": "ropa playa",
-                        "children": []
-                    },
-                    {
-                        "name": "calzado playa",
-                        "children": []
-                    },
-                    {
-                        "name": "protección UV",
-                        "children": []
-                    }
-                ]
-            }
-        ]
-    }
+   }
 ]
-
-
-export default function MenuItems ({data=categoryTree}: Props) {
-
-    return (
-        <div data-fs-menu className={style.fsMenu}>
-            {data?.map(({name, children}, index) => (
-                <>
-                <Dropdown key={index} data-fs-menu-depto>
-                    <DropdownButton>
-                        {name}
-                    </DropdownButton>
-                    <DropdownMenu data-fs-menu-dropdownMenu>
-                        <div>
-                            <DropdownItem data-fs-menu-dropdownitem>                               
-                                {children && <SubMenu categoryTree={children}/>}
-                            </DropdownItem>
-                        </div>
-               
-                        
-                    </DropdownMenu>
-                </Dropdown>
-                </>
-            ))}
-            <LinkUUnidades  />
-        </div>
-    )
-}
