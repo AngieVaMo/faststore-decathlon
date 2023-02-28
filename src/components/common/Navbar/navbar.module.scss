@@ -207,4 +207,8 @@
       border-left: none;
     }
   }
+
+  [data-fs-dropdown-overlay="true"] {
+    background-color: #fff;
+  }
 }

@@ -6,7 +6,7 @@ type Items = {
     name: string
 }
 
-export default function SubMenuItems({ data }: Props) {
+export default function SubMenuItems({data}: Props) {
     return (
         <ul>
             {data?.map((items, index) => (

@@ -1,3 +1,72 @@
+@import "src/styles/scaffold";
+
 .fs-menu {
+
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #edeff1;
+    border-top: 1px solid #edeff1;
+
+    [data-fs-dropdown-button] {
+        background-color: transparent;
+        border: none;
+        text-transform: capitalize;
+        padding: 20px 25px;
+        border-bottom: 4px solid #fff;
+
+        &:hover {
+          border-bottom: 4px solid #0082c3;
+          color: #0082c3;
+        }
+    }
+}
+
+[data-fs-menu-dropdownitem] {
+    background-color: #fff;
+    border: none;
+    width: 100%;
+    height: 25vh;
+    border-top: 1px solid #edeff1;
+}
+
+[data-fs-menu-dropdownMenu] {
+    left: 0 !important;
+    width: 100%;
+}
+
+[data-fs-menu-accordionButton] {
+    display: block;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    color: #242323;
+
+    &:hover {
+        color: #176ea6;
+    }
+}
+
+[data-fs-menu-accordionPanel] {
+    position: absolute;
+    top: 0px;
+    left: 350px;
+    text-transform: capitalize;
+    text-align: start;
+    font-size: 15px;
     
+    li {
+        &:hover {
+            color: #176ea6;
+        }
+    }
+}
+
+[data-fs-menu-accordion] {
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    border-right: 1px solid #edeff1;
+    padding-right: 30px;
 }

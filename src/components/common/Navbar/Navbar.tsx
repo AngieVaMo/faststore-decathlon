@@ -41,11 +41,7 @@ function Navbar() {
     >
       <section data-fs-navbar-header>
         <div className="layout__content" data-fs-navbar-row>
-          <div >
-             <Menu>
-               <MenuItems />
-             </Menu>
-          </div>
+          
           {!searchExpanded && (
             <>
               <Button
@@ -96,7 +92,12 @@ function Navbar() {
           </div>
         </div>
       </section>
-      <NavLinks classes="hidden-mobile" />
+          <div className="hidden-mobile">
+             <Menu>
+               <MenuItems />
+             </Menu>
+          </div>
+      {/* <NavLinks classes="hidden-mobile" /> */}
 
       {displayNavbar && <NavbarSlider />}
     </header>

@@ -15,22 +15,26 @@ export default function Menu ({
     const [indices, setIndices] = useState<number[]>(indicesDefault)
 
     const onChange = (index: number): void => {
+        // const indice: HTMLElement[] = Array.from(
+        //     document.querySelectorAll('button [data-accordion-button]')
+        // )
         setIndices([index >= 0 ? index : indices[0]])
+        console.log("INDICE: ", index)
     }
 
-    const onMouseEnter = (e: React.MouseEvent): void => {
-        const indice: HTMLElement[] = Array.from(
-          document.querySelectorAll('button [data-accordion-button]')
-        )
+    // const onMouseEnter = (e: React.MouseEvent): void => {
+        
+
+    //    // console.log("INDICE", indice)
     
-        onChange(indice.indexOf(e.target as HTMLElement))
-    }
+    //     onChange(indice.indexOf(e.target as HTMLElement))
+    // }
     
     const value = useMemo(() => {
         return {
           indices,
           onChange,
-          onMouseEnter,
+          //onMouseEnter,
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [indices])

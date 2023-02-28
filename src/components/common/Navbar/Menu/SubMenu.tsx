@@ -12,36 +12,42 @@ import { useMenu } from '../../../../sdk/menu/hooks/useMenu'
 
 
 type Props = {
-    categoryTree?: AnyLevel[]
+    categoryTree?: Category[]
     ref?: ForwardedRef<HTMLDivElement>
 }
 
-type AnyLevel = {
+type Category = {
     name: string
-    children?: AnyLevel[]
+    children?: Category[]
 }
 
 export default function SubMenu({ categoryTree, ref }: Props) {
     const { indices, onChange, onMouseEnter } = useMenu()
+    
+    // {console.log("CATEGORY: ", categoryTree)}
 
     useEffect (() => {
         return () => onChange!(0)
-    }, [onChange])
+    }, [])
 
     return (
         <>
-          <Accordion indices={indices} onChange={onChange!}>
+          <Accordion indices={indices} onChange={onChange!} data-fs-menu-accordion>
             {categoryTree?.map((category, index) => (
-                <AccordionItem key={index} ref={ref}>
-                    <AccordionButton onMouseEnter={onMouseEnter}>
+                <>
+                
+                <AccordionItem data-fs-accordion-index={index} index={index} key={index} ref={ref}>
+                    <AccordionButton data-fs-menu-accordionButton>
                         {category.name}
                     </AccordionButton>
-                    <AccordionPanel>
+                    <AccordionPanel data-fs-menu-accordionPanel>
                         <SubMenuItems
                         data={category.children ? category.children : []}
                         />
                     </AccordionPanel>
                 </AccordionItem>
+                </>
+                
             ))}
 
           </Accordion>
