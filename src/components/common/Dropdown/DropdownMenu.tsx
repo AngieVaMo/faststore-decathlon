@@ -142,7 +142,7 @@ const DropdownMenu = ({
             style={{ ...dropdownPosition, ...style }}
             id={id}
             onMouseEnter={toggle}
-            //onMouseLeave={toggle}
+            onMouseLeave={toggle}
             {...otherProps}
           >
             {children}
