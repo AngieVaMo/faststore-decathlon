@@ -4,6 +4,7 @@ import type { HTMLAttributes } from 'react'
 
 import Section from '../Section'
 import styles from './banner-text.module.scss'
+import LinkUUnidades from 'src/components/ui/Link/LinkUUnidades'
 
 type BannerTextVariant =
   | {
@@ -76,6 +77,7 @@ function BannerText({
             >
               {actionLabel}
             </ButtonLink>
+            <LinkUUnidades/>
           </BannerLink>
         </BannerContent>
       </Banner>

@@ -53,6 +53,10 @@
     left: 0;
     right: 0;
     bottom: 48px;
+
+    @include media("<notebook") {
+      position: unset;
+    }
   }
 
   [data-fs-logo] {

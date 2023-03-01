@@ -58,6 +58,7 @@
     @include media("<notebook") {
       display: block;
       padding: 0;
+      width: 100% !important;
 
       >li {
         border-bottom: 1px solid #edeff1;
