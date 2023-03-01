@@ -10,6 +10,8 @@ import { getCMSPageDataByContentType } from 'src/cms/client'
 //import type { ContentData } from '@vtex/client-cms'
 import { useSession } from 'src/sdk/session'
 import Newsletter from 'src/components/sections/Newsletter'
+import BannerGif from 'src/components/sections/BannerGif/BannerGif'
+//import homeBanner from 'src/images/homeBanner.gif'
 
 export type Props = PageProps<
   HomePageQueryQuery,
@@ -70,6 +72,21 @@ function Page(props: Props) {
         (not the HTML tag) before rendering it here.
       */}
       {/* <RenderPageSections sections={cmsHome?.sections} /> */}
+      <BannerGif
+      url= {require('../../static/homeBanner.gif')}
+      btnText='Descubre más'
+      href='/'
+      />
+      <BannerGif
+      url= {require('../../static/spotify.gif')}
+      btnText='¡Dale play!'
+      href='/'
+      />
+      <BannerGif
+      url= {require('../../static/ows.gif')}
+      btnText='Compra aquí'
+      href='/'
+      />
       <Newsletter
         title="Get News and Special Offers!"
         description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
