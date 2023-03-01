@@ -24,6 +24,7 @@ interface Props {
 }
 
 function RenderPageSections({ sections }: Props) {
+  console.log("SECTION: ", sections)
   return (
     <>
       {sections?.map(({ name, data }, index) => {

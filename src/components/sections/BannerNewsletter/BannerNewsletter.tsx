@@ -1,3 +1,4 @@
+import LinkUUnidades from 'src/components/ui/Link/LinkUUnidades'
 import BannerText from '../BannerText'
 import Newsletter from '../Newsletter'
 import Section from '../Section'
@@ -20,6 +21,7 @@ function BannerNewsletter() {
           description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
           card
         />
+        <LinkUUnidades/>
       </div>
     </Section>
   )
