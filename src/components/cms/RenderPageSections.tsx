@@ -22,11 +22,15 @@ interface Props {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sections?: Array<{ name: string; data: any }>
 }
-
+const returningconsole = (sections: unknown) => {
+  // eslint-disable-next-line no-console
+  console.log('sections', sections, COMPONENTS)
+}
 function RenderPageSections({ sections }: Props) {
   console.log("SECTION: ", sections)
   return (
     <>
+    {returningconsole(sections)}
       {sections?.map(({ name, data }, index) => {
         const Component = COMPONENTS[name]
 
