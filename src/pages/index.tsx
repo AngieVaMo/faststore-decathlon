@@ -11,6 +11,10 @@ import type { ContentData } from '@vtex/client-cms'
 import { useSession } from 'src/sdk/session'
 import Newsletter from 'src/components/sections/Newsletter'
 import BannerGif from 'src/components/sections/BannerGif/BannerGif'
+import LinksSection from 'src/components/sections/LinksSection/LinksSection'
+import LinksSectionJson from 'src/components/sections/LinksSection/LinksSectionJson.json'
+import ImgSection from 'src/components/sections/ImgSection/ImgSection'
+import imgSectionJson from 'src/components/sections/ImgSection/imgSectionJson.json'
 //import homeBanner from 'src/images/homeBanner.gif'
 
 export type Props = PageProps<
@@ -78,16 +82,25 @@ function Page(props: Props) {
       url= {require('../../static/homeBanner.gif')}
       btnText='Descubre más'
       href='/'
+      classBanner='1'
       />
       <BannerGif
       url= {require('../../static/spotify.gif')}
       btnText='¡Dale play!'
       href='/'
+      classBanner='2'
       />
       <BannerGif
       url= {require('../../static/ows.gif')}
       btnText='Compra aquí'
       href='/'
+      classBanner='3'
+      />
+      <LinksSection
+      textArray={LinksSectionJson}
+      />
+      <ImgSection
+      infoArray={imgSectionJson}
       />
       <Newsletter
         title="Get News and Special Offers!"

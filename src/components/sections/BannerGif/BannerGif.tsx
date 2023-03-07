@@ -9,14 +9,14 @@ type Props = {
     btnText: string
     href: string
     icon?: string
+    classBanner?: string
 }
 
-function BannerGif ({imgDescription, url, btnText, href, icon}: Props) {
+function BannerGif ({imgDescription, url, btnText, href, icon, classBanner}: Props) {
     console.log("GIF: ", url)
     return (
         <Banner
-          className={styles.fsBannerGif}
-          data-fs-banner-gif
+          className={styles.fsBannerGif1}
         >
             <BannerImage data-fs-banner-gif-image>
                 <img src={url.default} alt={imgDescription} />
@@ -24,8 +24,9 @@ function BannerGif ({imgDescription, url, btnText, href, icon}: Props) {
             <BannerLink data-fs-banner-gif-link>
                 <BannerButton
                  data-fs-banner-gif-link-button
+                //  data-fs-banner-gif={classBanner}
                  variant='primary'
-                 href={href} 
+                 href={href}
                  icon={icon}
                 >
                     {btnText}
