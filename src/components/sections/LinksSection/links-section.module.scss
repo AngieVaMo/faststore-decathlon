@@ -1,0 +1,21 @@
+
+.fs-links-section {
+  background: linear-gradient(90deg,#004876,#176ea6,#0082c3,#176ea6,#004876);
+  width: 100%;
+  //background-image: url('/static/LinksSection.png')
+
+  [data-fs-links-section-container] {
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+
+  [data-fs-links-section-items] {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 22px 34px;
+  }
+
+}

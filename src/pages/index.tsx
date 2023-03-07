@@ -5,23 +5,29 @@ import { GatsbySeo, JsonLd } from 'gatsby-plugin-next-seo'
 import { mark } from 'src/sdk/tests/mark'
 import type { PageProps } from 'gatsby'
 import type { HomePageQueryQuery } from '@generated/graphql'
-//import RenderPageSections from 'src/components/cms/RenderPageSections'
+import RenderPageSections from 'src/components/cms/RenderPageSections'
 import { getCMSPageDataByContentType } from 'src/cms/client'
-//import type { ContentData } from '@vtex/client-cms'
+import type { ContentData } from '@vtex/client-cms'
 import { useSession } from 'src/sdk/session'
 import Newsletter from 'src/components/sections/Newsletter'
+import BannerGif from 'src/components/sections/BannerGif/BannerGif'
+import LinksSection from 'src/components/sections/LinksSection/LinksSection'
+import LinksSectionJson from 'src/components/sections/LinksSection/LinksSectionJson.json'
+import ImgSection from 'src/components/sections/ImgSection/ImgSection'
+import imgSectionJson from 'src/components/sections/ImgSection/imgSectionJson.json'
+//import homeBanner from 'src/images/homeBanner.gif'
 
 export type Props = PageProps<
   HomePageQueryQuery,
   unknown,
-  unknown
-  // { cmsHome: ContentData }
+  unknown,
+  { cmsHome: ContentData }
 >
 
 function Page(props: Props) {
   const {
     data: { site },
-    // serverData: { cmsHome },
+    serverData: { cmsHome },
   } = props
 
   const { locale } = useSession()
@@ -29,6 +35,7 @@ function Page(props: Props) {
   const title = site?.siteMetadata?.title ?? ''
   const siteUrl = `${site?.siteMetadata?.siteUrl}`
 
+  {console.log('index', cmsHome)}
   return (
     <>
       {/* SEO */}
@@ -69,7 +76,32 @@ function Page(props: Props) {
         If needed, wrap your component in a <Section /> component
         (not the HTML tag) before rendering it here.
       */}
-      {/* <RenderPageSections sections={cmsHome?.sections} /> */}
+
+      <RenderPageSections sections={cmsHome?.sections} />
+      <BannerGif
+      url= {require('../../static/homeBanner.gif')}
+      btnText='Descubre más'
+      href='/'
+      classBanner='1'
+      />
+      <BannerGif
+      url= {require('../../static/spotify.gif')}
+      btnText='¡Dale play!'
+      href='/'
+      classBanner='2'
+      />
+      <BannerGif
+      url= {require('../../static/ows.gif')}
+      btnText='Compra aquí'
+      href='/'
+      classBanner='3'
+      />
+      <LinksSection
+      textArray={LinksSectionJson}
+      />
+      <ImgSection
+      infoArray={imgSectionJson}
+      />
       <Newsletter
         title="Get News and Special Offers!"
         description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."

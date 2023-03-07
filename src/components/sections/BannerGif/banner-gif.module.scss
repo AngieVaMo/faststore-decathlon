@@ -1,0 +1,47 @@
+
+
+.fs-banner-gif1 {
+  color: red;
+
+  [data-fs-banner-gif = "1"] {
+
+    background-color: aqua !important;
+    color: aquamarine !important;
+
+    [data-fs-banner-gif-link-button] {
+      background-color: aqua;
+    }
+  }
+
+
+
+    [data-fs-banner-gif-link-button] {
+        background-color: #52ad14;
+        color: #000;
+        border-radius: 3px;
+        padding: 12px 24px;
+        font-size: 15px;
+        //font-weight: 800;
+        //font-family: 'Roboto Condensed', sans serif;
+        //line-height: 1;
+
+        &:hover {
+            background-color: #fbe93d;
+            color: #000;
+            border-radius: 3px;
+            padding: 12px 24px;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+    }
+
+    [data-fs-banner-gif-link] {
+        position: relative;
+        top: -70px;
+        text-align: right;
+        padding: 0 8px;
+    }
+
+
+}
+

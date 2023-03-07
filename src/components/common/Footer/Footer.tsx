@@ -9,6 +9,7 @@ import Icon from 'src/components/ui/Icon'
 import Link from 'src/components/ui/Link'
 import SROnly from 'src/components/ui/SROnly'
 import { mark } from 'src/sdk/tests/mark'
+import FooterAccordionMobile from './FooterAccordionMobile'
 
 import styles from './footer.module.scss'
 import FooterLinks from './FooterLinks'
@@ -45,7 +46,7 @@ export function Footer({
         <div data-fs-footer-promises>
         {sectionIncentives && <IncentivesFooter />}
         </div>
-        
+
       </div>
 
       <div data-fs-footer-nav className="layout__content">
@@ -53,7 +54,7 @@ export function Footer({
       </div>
 
       <div data-fs-footer-note className="layout__content">
-      
+
         {sectionSocial && (
           <section data-fs-footer-social>
             <p data-fs-footer-title>SÍGUENOS EN</p>
@@ -106,20 +107,29 @@ export function Footer({
           </section>
         )}
 
+        <div
+        className='display-mobile'
+        data-fs-footer-payment
+        >
+        <FooterAccordionMobile/>
+        </div>
+
+
+        <div className='hidden-mobile'>
         {sectionPaymentMethods && (
           <UIPaymentMethods data-fs-footer-payment-methods>
             <p data-fs-footer-title>MÉTODOS DE PAGO</p>
             <UIList>
               <li>
-                <Icon width="50px" height="30px" name="Visa" />
+                <Icon width="75px" height="45px" name="Visa" />
                 <SROnly text="Visa" />
               </li>
               <li>
-                <Icon width="50px" height="30px" name="Diners" />
+                <Icon width="75px" height="45px" name="Diners" />
                 <SROnly text="Diners Club" />
               </li>
               <li>
-                <Icon width="50px" height="30px" name="Mastercard" />
+                <Icon width="75px" height="45px" name="Mastercard" />
                 <SROnly text="Mastercard" />
               </li>
               {/* <li>
@@ -145,11 +155,15 @@ export function Footer({
             </UIList>
           </UIPaymentMethods>
         )}
+        </div>
 
-        <div data-fs-footer-payment-methods>
-          <p data-fs-footer-title>PASARELA DE PAGOS</p>
+      <div className='hidden-mobile'>
+         <div data-fs-footer-payment-methods>
+           <p data-fs-footer-title>PASARELA DE PAGOS</p>
+         </div>
         </div>
       </div>
+
       <div data-fs-footer-copyright className="text__legend">
           <p>© 2023 Decathlon™. Todos los derechos reservados.</p>
           {/* <p>© 2023 Decathlon™ Colombia SAS.</p>
@@ -169,10 +183,10 @@ export function Footer({
         <div className="layout__content">
           <p data-fs-footer-slogan>¡HACEMOS ACCESIBLE EL DEPORTE DE MANERA SOSTENIBLE, AL MAYOR NUMERO DE PERSONAS!</p>
         </div>
-        <LogoFooter /> 
+        <LogoFooter />
 
       </div>
-      
+
     </footer>
   )
 }
