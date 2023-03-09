@@ -113,7 +113,6 @@ const Newsletter = forwardRef<HTMLFormElement, NewsletterProps>(
                   <Link href="/" inverse variant="inline">
                     Privacy Policy.
                   </Link>
-                  
                 </span>
               </>
             ) : (

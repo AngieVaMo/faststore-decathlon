@@ -1,47 +1,78 @@
 
 
-.fs-banner-gif1 {
-  color: red;
+.fs-banner-gif {
 
-  [data-fs-banner-gif = "1"] {
-
-    background-color: aqua !important;
-    color: aquamarine !important;
-
-    [data-fs-banner-gif-link-button] {
-      background-color: aqua;
-    }
+  [data-fs-banner-gif-link-button] {
+    color: #000;
+    border-radius: 3px;
+    padding: 12px 24px;
+    font-size: 15px;
   }
 
-
+  &[data-fs-banner-gif = "1"] {
 
     [data-fs-banner-gif-link-button] {
-        background-color: #52ad14;
+      background-color: #fbe93d;
+
+      &:hover {
+        background-color: #fbe93d;
         color: #000;
         border-radius: 3px;
         padding: 12px 24px;
         font-size: 15px;
-        //font-weight: 800;
-        //font-family: 'Roboto Condensed', sans serif;
-        //line-height: 1;
-
-        &:hover {
-            background-color: #fbe93d;
-            color: #000;
-            border-radius: 3px;
-            padding: 12px 24px;
-            font-size: 15px;
-            opacity: 0.9;
-        }
+        opacity: 0.9;
+      }
     }
 
     [data-fs-banner-gif-link] {
-        position: relative;
-        top: -70px;
-        text-align: right;
-        padding: 0 8px;
+      position: relative;
+      top: -70px;
+      text-align: right;
+      padding: 0 8px;
+    }
+  }
+
+  &[data-fs-banner-gif = "2"] {
+
+    [data-fs-banner-gif-link-button] {
+      background-color: #1ed760;
+
+      &:hover {
+        background-color: #1ed760;
+        color: #000;
+        border-radius: 3px;
+        padding: 12px 24px;
+        font-size: 15px;
+        opacity: 0.9;
+      }
     }
 
+    [data-fs-banner-gif-link] {
+      position: relative;
+      top: -70px;
+      text-align: center;
+    }
+  }
 
+  &[data-fs-banner-gif = "3"] {
+
+    [data-fs-banner-gif-link-button] {
+      background-color: #fbe93d;
+
+      &:hover {
+        background-color: #fbe93d;
+        color: #000;
+        border-radius: 3px;
+        padding: 12px 24px;
+        font-size: 15px;
+        opacity: 0.9;
+      }
+    }
+
+    [data-fs-banner-gif-link] {
+      position: relative;
+      top: -70px;
+      text-align: center;
+    }
+  }
 }
-

@@ -58,7 +58,7 @@ function NavLinks({ onClickLink, classes = '' }: NavLinksProps) {
             </li>
           ))}
         </UIList>
-        <LinkUUnidades  />
+        <LinkUUnidades />
       </div>
     </nav>
   )

@@ -5,7 +5,7 @@ import type { ButtonProps } from '@faststore/ui'
 import { useDropdown } from './hooks/useDropdown'
 
 export interface DropdownButtonProps
-  extends Omit<ButtonProps, "variant" | "inverse" >{
+  extends Omit<ButtonProps, 'variant' | 'inverse'> {
   /**
    * ID to find this component in testing tools (e.g.: cypress, testing library, and jest).
    */
@@ -17,7 +17,7 @@ const DropdownButton = forwardRef<HTMLButtonElement, DropdownButtonProps>(
     { children, testId = 'fs-dropdown-button', ...otherProps },
     ref
   ) {
-    const {toggle, dropdownButtonRef, isOpen, id } = useDropdown()
+    const { toggle, dropdownButtonRef, isOpen, id } = useDropdown()
 
     useImperativeHandle(ref, () => dropdownButtonRef!.current!, [
       dropdownButtonRef,

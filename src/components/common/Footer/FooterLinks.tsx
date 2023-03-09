@@ -32,7 +32,7 @@ const links = [
       {
         href: '/',
         name: 'Trabaja con Nosotros',
-      }
+      },
     ],
   },
   {
@@ -61,7 +61,7 @@ const links = [
       {
         href: '/',
         name: 'Tarjeta de Regalo',
-      }
+      },
     ],
   },
   {
@@ -119,7 +119,7 @@ const links = [
       {
         href: '/',
         name: 'Decathlon Actividades',
-      }
+      },
     ],
   },
 ]

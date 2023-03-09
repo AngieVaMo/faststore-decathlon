@@ -8,7 +8,7 @@ module.exports = {
   // Platform specific configs for API
   api: {
     storeId: 'itglobers',
-    workspace: 'angiedev2',
+    workspace: 'testfaststore',
     environment: 'vtexcommercestable',
     hideUnavailableItems: true,
   },

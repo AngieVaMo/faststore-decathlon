@@ -27,10 +27,10 @@ const returningconsole = (sections: unknown) => {
   console.log('sections', sections, COMPONENTS)
 }
 function RenderPageSections({ sections }: Props) {
-  console.log("SECTION: ", sections)
+  console.log('SECTION: ', sections)
   return (
     <>
-    {returningconsole(sections)}
+      {returningconsole(sections)}
       {sections?.map(({ name, data }, index) => {
         const Component = COMPONENTS[name]
 

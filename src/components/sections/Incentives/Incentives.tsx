@@ -24,15 +24,13 @@ export interface IncentivesProps {
   variant?: 'horizontal' | 'vertical'
 }
 
-
-
 function Incentives({
   incentives,
   variant = 'horizontal',
   colored = false,
 }: IncentivesProps) {
-  useEffect (()=>{
-    incentives.map((incentive: any, index) =>{
+  useEffect(() => {
+    incentives.map((incentive: any, index) => {
       console.log(incentive.url.default)
     })
   })

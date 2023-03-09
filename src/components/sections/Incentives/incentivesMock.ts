@@ -31,13 +31,15 @@ export const incentivesMockFooter = [
   {
     url: require('../../../../static/promise1.png'),
     title: 'Más de 60 deportes',
-    firstLineText: 'Encuentra más de 5.000 productos para hacer deporte en un solo lugar',
+    firstLineText:
+      'Encuentra más de 5.000 productos para hacer deporte en un solo lugar',
     //secondLineText: 'by Safecon',
   },
   {
-    url:  require('../../../../static/promise2.png'),
+    url: require('../../../../static/promise2.png'),
     title: 'Recoge en Tienda',
-    firstLineText: '¡Compra en decathlon.com.co y recoge tu pedido en 2 horas en tu tienda favorita!',
+    firstLineText:
+      '¡Compra en decathlon.com.co y recoge tu pedido en 2 horas en tu tienda favorita!',
     //secondLineText: 'Products',
   },
   {
@@ -49,7 +51,8 @@ export const incentivesMockFooter = [
   {
     url: require('../../../../static/promise4.png'),
     title: 'Métodos de Entrega',
-    firstLineText: 'Conoce nuestros tiempos de \n entrega para las diferentes \n ciudades del país',
+    firstLineText:
+      'Conoce nuestros tiempos de \n entrega para las diferentes \n ciudades del país',
     //secondLineText: 'Options',
   },
   // {

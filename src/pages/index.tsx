@@ -35,7 +35,9 @@ function Page(props: Props) {
   const title = site?.siteMetadata?.title ?? ''
   const siteUrl = `${site?.siteMetadata?.siteUrl}`
 
-  {console.log('index', cmsHome)}
+  {
+    console.log('index', cmsHome)
+  }
   return (
     <>
       {/* SEO */}
@@ -79,29 +81,26 @@ function Page(props: Props) {
 
       <RenderPageSections sections={cmsHome?.sections} />
       <BannerGif
-      url= {require('../../static/homeBanner.gif')}
-      btnText='Descubre más'
-      href='/'
-      classBanner='1'
+        url={require('../../static/homeBanner.gif')}
+        btnText="Descubre más"
+        href="/"
+        classBanner="1"
       />
       <BannerGif
-      url= {require('../../static/spotify.gif')}
-      btnText='¡Dale play!'
-      href='/'
-      classBanner='2'
+        url={require('../../static/spotify.gif')}
+        btnText="¡Dale play!"
+        href="/"
+        icon="spotify"
+        classBanner="2"
       />
       <BannerGif
-      url= {require('../../static/ows.gif')}
-      btnText='Compra aquí'
-      href='/'
-      classBanner='3'
+        url={require('../../static/ows.gif')}
+        btnText="Compra aquí"
+        href="/"
+        classBanner="3"
       />
-      <LinksSection
-      textArray={LinksSectionJson}
-      />
-      <ImgSection
-      infoArray={imgSectionJson}
-      />
+      <LinksSection textArray={LinksSectionJson} />
+      <ImgSection infoArray={imgSectionJson} />
       <Newsletter
         title="Get News and Special Offers!"
         description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."

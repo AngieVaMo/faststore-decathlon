@@ -118,8 +118,8 @@ const gatsbyConfig: GatsbyConfig = {
     {
       resolve: '@vtex/gatsby-source-cms',
       options: {
-        workspace: 'master', // replace with the VTEX IO workspace in use - generally, use master.
-        tenant: 'itglobers', // replace with the name of your VTEX account
+        workspace: config.api.workspace, // replace with the VTEX IO workspace in use - generally, use master.
+        tenant: config.api.storeId, // replace with the name of your VTEX account
       },
     },
   ],

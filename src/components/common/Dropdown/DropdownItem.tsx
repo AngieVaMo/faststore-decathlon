@@ -14,7 +14,7 @@ export interface DropdownItemProps
   /**
    * A React component that will be rendered as an icon.
    */
-  icon?: IconProps["component"]
+  icon?: IconProps['component']
 }
 
 const DropdownItem = forwardRef<HTMLButtonElement, DropdownItemProps>(

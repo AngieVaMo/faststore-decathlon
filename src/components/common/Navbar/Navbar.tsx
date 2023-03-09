@@ -41,7 +41,6 @@ function Navbar() {
     >
       <section data-fs-navbar-header>
         <div className="layout__content" data-fs-navbar-row>
-          
           {!searchExpanded && (
             <>
               <Button
@@ -83,8 +82,8 @@ function Navbar() {
               buttonTestId="store-input-mobile-button"
               onSearchClick={handlerExpandSearch}
             /> */}
-            <LinkAyuda/>
-            <LinkTiendas/>
+            <LinkAyuda />
+            <LinkTiendas />
             <Suspense fallback={<ButtonSignInFallback />}>
               <ButtonSignIn />
             </Suspense>
@@ -92,11 +91,11 @@ function Navbar() {
           </div>
         </div>
       </section>
-          <div className="hidden-mobile">
-             <Menu>
-               <MenuItems />
-             </Menu>
-          </div>
+      <div className="hidden-mobile">
+        <Menu>
+          <MenuItems />
+        </Menu>
+      </div>
       {/* <NavLinks classes="hidden-mobile" /> */}
 
       {displayNavbar && <NavbarSlider />}

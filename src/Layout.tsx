@@ -8,7 +8,6 @@ import Toast from 'src/components/common/Toast'
 import { useUI } from 'src/sdk/ui/Provider'
 import type { PropsWithChildren } from 'react'
 
-
 import 'src/styles/pages/layout.scss'
 
 const CartSidebar = lazy(() => import('src/components/cart/CartSidebar'))
