@@ -82,7 +82,8 @@ export const useFilter = (allFacets: Filter_FacetsFragment[]) => {
   } = useSearch()
 
   const [{ selected, expanded }, dispatch] = useReducer(reducer, null, () => ({
-    expanded: new Set([]),
+    // expanded: new Set([]),
+    expanded: new Set([0, 1, 2, 3, 4, 5, 6]),
     selected: selectedFacets,
   }))
 

@@ -44,9 +44,8 @@ export function Footer({
     >
       <div data-fs-footer-promises-container>
         <div data-fs-footer-promises>
-        {sectionIncentives && <IncentivesFooter />}
+          {sectionIncentives && <IncentivesFooter />}
         </div>
-
       </div>
 
       <div data-fs-footer-nav className="layout__content">
@@ -54,7 +53,6 @@ export function Footer({
       </div>
 
       <div data-fs-footer-note className="layout__content">
-
         {sectionSocial && (
           <section data-fs-footer-social>
             <p data-fs-footer-title>SÍGUENOS EN</p>
@@ -107,32 +105,28 @@ export function Footer({
           </section>
         )}
 
-        <div
-        className='display-mobile'
-        data-fs-footer-payment
-        >
-        <FooterAccordionMobile/>
+        <div className="display-mobile" data-fs-footer-payment>
+          <FooterAccordionMobile />
         </div>
 
-
-        <div className='hidden-mobile'>
-        {sectionPaymentMethods && (
-          <UIPaymentMethods data-fs-footer-payment-methods>
-            <p data-fs-footer-title>MÉTODOS DE PAGO</p>
-            <UIList>
-              <li>
-                <Icon width="75px" height="45px" name="Visa" />
-                <SROnly text="Visa" />
-              </li>
-              <li>
-                <Icon width="75px" height="45px" name="Diners" />
-                <SROnly text="Diners Club" />
-              </li>
-              <li>
-                <Icon width="75px" height="45px" name="Mastercard" />
-                <SROnly text="Mastercard" />
-              </li>
-              {/* <li>
+        <div className="hidden-mobile">
+          {sectionPaymentMethods && (
+            <UIPaymentMethods data-fs-footer-payment-methods>
+              <p data-fs-footer-title>MÉTODOS DE PAGO</p>
+              <UIList>
+                <li>
+                  <Icon width="75px" height="45px" name="Visa" />
+                  <SROnly text="Visa" />
+                </li>
+                <li>
+                  <Icon width="75px" height="45px" name="Diners" />
+                  <SROnly text="Diners Club" />
+                </li>
+                <li>
+                  <Icon width="75px" height="45px" name="Mastercard" />
+                  <SROnly text="Mastercard" />
+                </li>
+                {/* <li>
                 <Icon width="34px" height="24px" name="EloCard" />
                 <SROnly text="Elo Card" />
               </li>
@@ -152,21 +146,21 @@ export function Footer({
                 <Icon width="34px" height="24px" name="ApplePay" />
                 <SROnly text="Apple Pay" />
               </li> */}
-            </UIList>
-          </UIPaymentMethods>
-        )}
+              </UIList>
+            </UIPaymentMethods>
+          )}
         </div>
 
-      <div className='hidden-mobile'>
-         <div data-fs-footer-payment-methods>
-           <p data-fs-footer-title>PASARELA DE PAGOS</p>
-         </div>
+        <div className="hidden-mobile">
+          <div data-fs-footer-payment-methods>
+            <p data-fs-footer-title>PASARELA DE PAGOS</p>
+          </div>
         </div>
       </div>
 
       <div data-fs-footer-copyright className="text__legend">
-          <p>© 2023 Decathlon™. Todos los derechos reservados.</p>
-          {/* <p>© 2023 Decathlon™ Colombia SAS.</p>
+        <p>© 2023 Decathlon™. Todos los derechos reservados.</p>
+        {/* <p>© 2023 Decathlon™ Colombia SAS.</p>
           <div>
             <p>NIT 900868271-1</p>
             <p>601 9187891</p>
@@ -179,14 +173,14 @@ export function Footer({
           <address>Mount St, 000, New York / NY - 00000.</address> */}
       </div>
       <div data-fs-footer-bottom>
-
         <div className="layout__content">
-          <p data-fs-footer-slogan>¡HACEMOS ACCESIBLE EL DEPORTE DE MANERA SOSTENIBLE, AL MAYOR NUMERO DE PERSONAS!</p>
+          <p data-fs-footer-slogan>
+            ¡HACEMOS ACCESIBLE EL DEPORTE DE MANERA SOSTENIBLE, AL MAYOR NUMERO
+            DE PERSONAS!
+          </p>
         </div>
         <LogoFooter />
-
       </div>
-
     </footer>
   )
 }

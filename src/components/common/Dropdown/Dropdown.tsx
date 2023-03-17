@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
-import React, { useRef, useMemo, useState, useEffect, useCallback } from 'react'
+import { useRef, useMemo, useState, useEffect, useCallback } from 'react'
 
-import DropdownContext from '../Dropdown/contexts/DropdownContext'
+import DropdownContext from './contexts/DropdownContext'
 
 export type DropdownProps = {
   children: ReactNode
@@ -34,7 +34,7 @@ const Dropdown = ({
     setIsOpen((old) => {
       if (old) {
         onDismiss?.()
-        //dropdownButtonRef.current?.focus()
+        // dropdownButtonRef.current?.focus()
       }
 
       return !old
@@ -64,36 +64,36 @@ const Dropdown = ({
 
   useEffect(() => {
     isOpen && dropdownItemsRef?.current[0]
-    //?.focus()
+    //? .focus()
   }, [isOpen])
 
-  useEffect(() => {
-    let firstClick = true
+  // useEffect(() => {
+  //   const firstClick = true
 
-    const event = (e: MouseEvent) => {
-      const someItemWasClicked = dropdownItemsRef?.current.some(
-        (item) => e.target === item
-      )
+  //   // const event = (e: MouseEvent) => {
+  //   //   const someItemWasClicked = dropdownItemsRef?.current.some(
+  //   //     (item) => e.target === item
+  //   //   )
 
-      if (firstClick) {
-        firstClick = false
+  //   //   if (firstClick) {
+  //   //     firstClick = false
 
-        return
-      }
+  //   //     return
+  //   //   }
 
-      //!someItemWasClicked && close()
-    }
+  //   //   //!someItemWasClicked && close()
+  //   // }
 
-    // if (isOpen) {
-    //   document.addEventListener('click', event)
-    // } else {
-    //   document.removeEventListener('click', event)
-    // }
+  //   // if (isOpen) {
+  //   //   document.addEventListener('click', event)
+  //   // } else {
+  //   //   document.removeEventListener('click', event)
+  //   // }
 
-    // return () => {
-    //   document.removeEventListener('click', event)
-    // }
-  }, [close, isOpen])
+  //   // return () => {
+  //   //   document.removeEventListener('click', event)
+  //   // }
+  // }, [close, isOpen])
 
   const value = useMemo(() => {
     return {

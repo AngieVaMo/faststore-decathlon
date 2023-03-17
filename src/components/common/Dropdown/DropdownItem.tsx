@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes } from 'react'
-import React, { useImperativeHandle, forwardRef, useRef, useState } from 'react'
+import { useImperativeHandle, forwardRef, useRef, useState } from 'react'
 import { Icon } from '@faststore/ui'
 import type { IconProps } from '@faststore/ui'
 
@@ -14,7 +14,7 @@ export interface DropdownItemProps
   /**
    * A React component that will be rendered as an icon.
    */
-  icon?: IconProps["component"]
+  icon?: IconProps['component']
 }
 
 const DropdownItem = forwardRef<HTMLButtonElement, DropdownItemProps>(
@@ -22,8 +22,8 @@ const DropdownItem = forwardRef<HTMLButtonElement, DropdownItemProps>(
     { children, icon, onClick, testId = 'fs-dropdown-item', ...otherProps },
     ref
   ) {
-    const { dropdownItemsRef, selectedDropdownItemIndexRef, close } =
-      useDropdown()
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { dropdownItemsRef, selectedDropdownItemIndexRef } = useDropdown()
 
     const [dropdownItemIndex, setDropdownItemIndex] = useState(0)
     const dropdownItemRef = useRef<HTMLButtonElement>()
@@ -40,9 +40,11 @@ const DropdownItem = forwardRef<HTMLButtonElement, DropdownItemProps>(
     }
 
     const onFocusItem = () => {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       selectedDropdownItemIndexRef!.current = dropdownItemIndex
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       dropdownItemsRef?.current[selectedDropdownItemIndexRef!.current]
-      //?.focus()
+      // ?.focus()
     }
 
     // const handleOnClickItem = (
@@ -52,6 +54,7 @@ const DropdownItem = forwardRef<HTMLButtonElement, DropdownItemProps>(
     //   close?.()
     // }
 
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     useImperativeHandle(ref, () => dropdownItemRef.current!, [])
 
     return (
@@ -61,7 +64,7 @@ const DropdownItem = forwardRef<HTMLButtonElement, DropdownItemProps>(
         ref={addToRefs}
         onFocus={onFocusItem}
         onMouseEnter={onFocusItem}
-        //onClick={handleOnClickItem}
+        // onClick={handleOnClickItem}
         role="menuitem"
         tabIndex={-1}
         data-index={dropdownItemIndex}

@@ -21,7 +21,7 @@ function BannerNewsletter() {
           description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
           card
         />
-        <LinkUUnidades/>
+        <LinkUUnidades />
       </div>
     </Section>
   )

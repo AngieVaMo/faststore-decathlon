@@ -77,7 +77,7 @@ function BannerText({
             >
               {actionLabel}
             </ButtonLink>
-            <LinkUUnidades/>
+            <LinkUUnidades />
           </BannerLink>
         </BannerContent>
       </Banner>

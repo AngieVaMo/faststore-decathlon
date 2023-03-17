@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable jsx-a11y/alt-text */
 import { Incentive as UIIncentive, List as UIList } from '@faststore/ui'
-import { useEffect } from 'react'
-import Icon from 'src/components/ui/Icon'
+// import { useEffect } from 'react'
 
 import styles from './incentives.module.scss'
 
 interface Incentive {
-  icon: string
-  url: string
+  icon?: string
+  url?: string
   title?: string
   firstLineText: string
   secondLineText?: string
@@ -24,18 +25,16 @@ export interface IncentivesProps {
   variant?: 'horizontal' | 'vertical'
 }
 
-
-
 function Incentives({
   incentives,
   variant = 'horizontal',
   colored = false,
 }: IncentivesProps) {
-  useEffect (()=>{
-    incentives.map((incentive: any, index) =>{
-      console.log(incentive.url.default)
-    })
-  })
+  // useEffect(() => {
+  //   incentives.map((incentive: any, index) => {
+  //     console.log(incentive.url.default)
+  //   })
+  // })
   return (
     <div
       data-fs-incentives

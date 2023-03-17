@@ -6,26 +6,29 @@
   // --------------------------------------------------------
 
   // Default properties
-  --fs-footer-spacing-vertical-mobile             : var(--fs-spacing-4);
-  --fs-footer-spacing-vertical-notebook           : var(--fs-spacing-5);
-  --fs-footer-spacing-horizontal-notebook         : var(--fs-grid-gap-3);
+  --fs-footer-spacing-vertical-mobile: var(--fs-spacing-4);
+  --fs-footer-spacing-vertical-notebook: var(--fs-spacing-5);
+  --fs-footer-spacing-horizontal-notebook: var(--fs-grid-gap-3);
 
-  --fs-footer-bkg-color                           : var(--fs-color-neutral-bkg);
+  --fs-footer-bkg-color: var(--fs-color-neutral-bkg);
 
   // Divisor
-  --fs-footer-divisor-border-width                : var(--fs-border-width);
-  --fs-footer-divisor-border-color                : var(--fs-border-color-light);
+  --fs-footer-divisor-border-width: var(--fs-border-width);
+  --fs-footer-divisor-border-color: var(--fs-border-color-light);
 
   // Title
-  --fs-footer-title-size                          : var(--fs-text-size-body);
-  --fs-footer-title-line-height                   : 1.25;
-  --fs-footer-title-weight                        : var(--fs-text-weight-bold);
-  --fs-footer-title-margin-bottom                 : var(--fs-spacing-1);
+  --fs-footer-title-size: var(--fs-text-size-body);
+  --fs-footer-title-line-height: 1.25;
+  --fs-footer-title-weight: var(--fs-text-weight-bold);
+  --fs-footer-title-margin-bottom: var(--fs-spacing-1);
 
   // Payment Methods
-  --fs-footer-payment-methods-flags-border-width  : var(--fs-border-width);
-  --fs-footer-payment-methods-flags-border-color  : var(--fs-color-neutral-3);
-  --fs-footer-payment-methods-flags-border-radius : var(--fs-border-radius-small);
+  --fs-footer-payment-methods-flags-border-width: var(--fs-border-width);
+  --fs-footer-payment-methods-flags-border-color: var(--fs-color-neutral-3);
+  --fs-footer-payment-methods-flags-border-radius:
+    var(
+      --fs-border-radius-small
+    );
 
   // --------------------------------------------------------
   // Structural Styles
@@ -40,28 +43,34 @@
   }
 
   [data-fs-footer-promises-container] {
-    background: linear-gradient(90deg,#004876,#176ea6,#0082c3,#176ea6,#004876);
+    position: relative;
     min-height: 188px;
     padding-top: 10px;
-    position: relative;
     margin-top: 150px;
+    background:
+      linear-gradient(
+        90deg,
+        #004876,
+        #176ea6,
+        #0082c3,
+        #176ea6,
+        #004876
+      );
   }
 
   [data-fs-footer-payment] {
-
     @include media("<notebook") {
       width: 100%;
       border-top: 0.5px solid #e3e6e8;
     }
-
   }
 
   [data-fs-footer-promises] {
     position: absolute;
-    margin: auto;
-    left: 0;
     right: 0;
     bottom: 48px;
+    left: 0;
+    margin: auto;
 
     @include media("<notebook") {
       position: unset;
@@ -73,14 +82,14 @@
   }
 
   [data-fs-footer-title] {
+    align-self: center;
+    margin: 0;
     margin-bottom: var(--fs-footer-title-margin-bottom);
     font-size: var(--fs-footer-title-size);
     font-size: 14px;
     font-weight: var(--fs-footer-title-weight);
     line-height: var(--fs-footer-title-line-height);
     color: #4e4e4e;
-    align-self: center
-    ;
 
     @include media("<notebook") {
       text-align: center;
@@ -99,15 +108,18 @@
 
     @include media(">=notebook") {
       display: grid;
-      //grid-template-columns: repeat(12, 1fr);
+
+      // grid-template-columns: repeat(12, 1fr);
       grid-template-columns: repeat(3, 1fr);
-      //column-gap: var(--fs-footer-spacing-horizontal-notebook);
+
+      // column-gap: var(--fs-footer-spacing-horizontal-notebook);
     }
 
     &:not(:first-of-type)::before {
       width: 100%;
-      //content: "";
-      //border-top: var(--fs-footer-divisor-border-width) solid var(--fs-footer-divisor-border-color);
+
+      // content: "";
+      // border-top: var(--fs-footer-divisor-border-width) solid var(--fs-footer-divisor-border-color);
 
       @include media(">=notebook") {
         grid-column: span 12;
@@ -120,8 +132,8 @@
     @include media(">=notebook") {
       row-gap: var(--fs-footer-spacing-vertical-notebook);
       padding-bottom: var(--fs-footer-spacing-vertical-notebook);
-      border-bottom: 1px solid hsla(0,0%,44%,.14);
-      border-top: 1px solid hsla(0,0%,44%,.14);
+      border-top: 1px solid hsl(0deg 0% 44% / 14%);
+      border-bottom: 1px solid hsl(0deg 0% 44% / 14%);
     }
   }
 
@@ -142,23 +154,31 @@
     @include media(">=notebook") {
       row-gap: var(--fs-footer-spacing-vertical-notebook);
       padding-top: 0;
-      border-bottom: 1px solid hsla(0,0%,44%,.14);
-      //padding-top: 22px;
+
+      // padding-top: 22px;
       padding-bottom: 22px;
+      border-bottom: 1px solid hsl(0deg 0% 44% / 14%);
     }
   }
 
   [data-fs-footer-social],
   [data-fs-footer-payment-methods] {
     @include media(">=notebook") {
-      //grid-column: 11 / span 2;
-      //margin-left: calc(-1 * var(--fs-spacing-3));
+      // grid-column: 11 / span 2;
+      // margin-left: calc(-1 * var(--fs-spacing-3));
     }
   }
 
   [data-fs-footer-social] {
     display: flex;
-    //flex-direction: column;
+
+    // flex-direction: column;
+
+    @include media(">=notebook") {
+      ~ div {
+        display: flex;
+      }
+    }
 
     @include media("<notebook") {
       padding: var(--fs-footer-spacing-vertical-mobile) 0 var(--fs-spacing-3);
@@ -184,15 +204,17 @@
   }
 
   [data-fs-footer-payment-methods] {
+    display: contents;
+
     @include media("<notebook") {
       margin: var(--fs-footer-spacing-vertical-mobile) auto;
     }
 
     @include media(">=notebook") {
-      order: 3;
       display: flex;
+      order: 3;
 
-      >div {
+      > div {
         display: flex;
       }
     }
@@ -206,8 +228,8 @@
 
   [data-payment-methods-flags] {
     svg {
-     // border: var(--fs-footer-payment-methods-flags-border-width) solid var(--fs-footer-payment-methods-flags-border-color);
-     // border-radius: var(--fs-footer-payment-methods-flags-border-radius);
+      // border: var(--fs-footer-payment-methods-flags-border-width) solid var(--fs-footer-payment-methods-flags-border-color);
+      // border-radius: var(--fs-footer-payment-methods-flags-border-radius);
     }
 
     [data-fs-list] {
@@ -218,7 +240,9 @@
       margin-top: var(--fs-spacing-3);
       margin-top: 5px;
 
-      li { display: flex; }
+      li {
+        display: flex;
+      }
 
       @include media("<notebook") {
         column-gap: var(--fs-grid-gap-2);
@@ -231,10 +255,10 @@
       margin: var(--fs-spacing-2) auto;
     }
 
-    >p {
-      text-align: center;
+    > p {
       font-size: 12px;
       color: #999;
+      text-align: center;
     }
 
     address {
@@ -242,12 +266,12 @@
     }
 
     @include media(">=notebook") {
-      grid-column: span 6;
       display: flex;
+      grid-column: span 6;
       justify-content: center;
       padding: 20px 0;
 
-      >div {
+      > div {
         display: flex;
         justify-content: space-between;
       }
@@ -302,36 +326,36 @@
 
   &:not([data-fs-footer-payment-methods="true"]) [data-fs-footer-copyright] {
     @include media(">=notebook") {
-      grid-column: span 10;
       display: flex;
+      grid-column: span 10;
       justify-content: center;
     }
   }
 
   [data-fs-footer-slogan] {
-    font-size: 19px;
     margin-bottom: 15px;
-    color: #fff;
+    font-size: 19px;
     font-style: italic;
-    text-align: center;
     line-height: 25px;
+    color: #fff;
+    text-align: center;
 
     @include media(">=notebook") {
-      font-size: 35px;
       margin-bottom: 30px;
+      font-size: 35px;
       line-height: 45px;
     }
   }
 
   [data-fs-footer-bottom] {
-    padding: 40px 0 0 0;
-    background: radial-gradient(#0082c3,#176ea6,#004876);
+    padding: 40px 0 0;
     margin-top: 20px;
+    background: radial-gradient(#0082c3, #176ea6, #004876);
 
-    >div {
+    > div {
       width: 100%;
-      margin: 0 auto;
       padding: 0;
+      margin: 0 auto;
 
       @include media(">=notebook") {
         width: 90%;
@@ -339,7 +363,7 @@
     }
 
     @include media(">=notebook") {
-      padding: 75px 0 ;
+      padding: 75px 0;
     }
   }
 
@@ -351,13 +375,11 @@
     }
 
     a {
-      text-decoration: none;
+      padding-left: 30px;
       font-size: 12px;
       font-weight: 700;
       color: #999999;
-      padding-left: 30px;
-
+      text-decoration: none;
     }
   }
-
 }

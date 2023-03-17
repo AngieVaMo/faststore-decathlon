@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import type {
   AriaAttributes,
   KeyboardEvent,
@@ -5,7 +7,7 @@ import type {
   MouseEvent,
   ReactNode,
   DetailedHTMLProps,
-  HTMLAttributes
+  HTMLAttributes,
 } from 'react'
 import React from 'react'
 import { createPortal } from 'react-dom'
@@ -13,10 +15,10 @@ import { createPortal } from 'react-dom'
 import { useDropdown } from './hooks/useDropdown'
 import { useDropdownPosition } from './hooks/useDropdownPosition'
 
-//TODO: Replace by ModalContentProps when Modal component be brought
+// TODO: Replace by ModalContentProps when Modal component be brought
 type BaseModalProps = Omit<
-DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-'ref' | 'onClick'
+  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+  'ref' | 'onClick'
 >
 
 export interface DropdownMenuProps extends BaseModalProps {
@@ -57,8 +59,15 @@ const DropdownMenu = ({
   style,
   ...otherProps
 }: PropsWithChildren<DropdownMenuProps>) => {
-  const { isOpen, close, dropdownItemsRef, selectedDropdownItemIndexRef, dropdownButtonRef, id, toggle } =
-    useDropdown()
+  const {
+    isOpen,
+    close,
+    dropdownItemsRef,
+    selectedDropdownItemIndexRef,
+    dropdownButtonRef,
+    id,
+    toggle,
+  } = useDropdown()
 
   const dropdownPosition = useDropdownPosition()
 

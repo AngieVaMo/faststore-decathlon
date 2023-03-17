@@ -34,27 +34,18 @@ type Element = {
 //   }
 // ]
 
-function LinksSection ({ textArray }: Props) {
+function LinksSection({ textArray }: Props) {
   return (
-    <div
-    className={`${styles.fsLinksSection} ${'hidden-mobile'}`}
-    >
-      <div
-       data-fs-links-section-container
-      >
-      {textArray.map(({name, href}) => (
-      <>
-        <Link
-          href={href}
-          data-fs-links-section-items
-        >
-          {name}
-        </Link>
-      </>
-
-      ))}
-
-    </div>
+    <div className={`${styles.fsLinksSection} ${'hidden-mobile'}`}>
+      <div data-fs-links-section-container>
+        {textArray.map(({ name, href }) => (
+          <>
+            <Link href={href} data-fs-links-section-items>
+              {name}
+            </Link>
+          </>
+        ))}
+      </div>
     </div>
   )
 }
