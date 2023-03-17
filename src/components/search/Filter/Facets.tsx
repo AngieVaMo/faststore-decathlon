@@ -52,7 +52,8 @@ function Facets({
   return (
     <div className={styles.fsFacets} data-fs-filter data-testid={testId}>
       <h2 className="text__title-mini-alt" data-fs-facets-title>
-        Filters
+        {/* Filters */}
+        OCULTAR FILTROS
       </h2>
       <Accordion
         expandedIndices={indicesExpanded}
@@ -60,6 +61,7 @@ function Facets({
         data-fs-facets-accordion
       >
         {facets.map((facet, index) => {
+          // eslint-disable-next-line no-unneeded-ternary
           const isExpanded = indicesExpanded.has(index)
           const { __typename: type, label } = facet
 

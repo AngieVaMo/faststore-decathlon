@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import type {
   AriaAttributes,
   KeyboardEvent,
@@ -13,7 +15,7 @@ import { createPortal } from 'react-dom'
 import { useDropdown } from './hooks/useDropdown'
 import { useDropdownPosition } from './hooks/useDropdownPosition'
 
-//TODO: Replace by ModalContentProps when Modal component be brought
+// TODO: Replace by ModalContentProps when Modal component be brought
 type BaseModalProps = Omit<
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
   'ref' | 'onClick'

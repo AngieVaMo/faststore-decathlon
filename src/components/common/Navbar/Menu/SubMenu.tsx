@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
 import {
   Accordion,
   AccordionItem,
@@ -21,7 +24,7 @@ type Category = {
 }
 
 export default function SubMenu({ categoryTree, ref }: Props) {
-  const { indices, onChange, onMouseEnter } = useMenu()
+  const { indices, onChange } = useMenu()
 
   // {console.log("CATEGORY: ", categoryTree)}
 

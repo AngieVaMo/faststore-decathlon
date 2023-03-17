@@ -6,28 +6,28 @@
   // --------------------------------------------------------
 
   // Default properties
-  --fs-incentives-bkg-color               : var(--fs-color-primary-bkg-light);
+  --fs-incentives-bkg-color: var(--fs-color-primary-bkg-light);
 
-  --fs-incentives-gap                     : var(--fs-spacing-4);
-  --fs-incentives-padding-top             : var(--fs-incentives-gap);
-  --fs-incentives-padding-bottom          : var(--fs-incentives-gap);
+  --fs-incentives-gap: var(--fs-spacing-4);
+  --fs-incentives-padding-top: var(--fs-incentives-gap);
+  --fs-incentives-padding-bottom: var(--fs-incentives-gap);
 
-  --fs-incentives-border-color            : var(--fs-border-color-light);
-  --fs-incentives-border-width            : var(--fs-border-width);
+  --fs-incentives-border-color: var(--fs-border-color-light);
+  --fs-incentives-border-width: var(--fs-border-width);
 
   // Title
-  --fs-incentives-title-size              : var(--fs-text-size-1);
-  --fs-incentives-title-weight            : var(--fs-text-weight-bold);
-  --fs-incentives-title-line-height       : 1.42;
-  --fs-incentives-title-color             : var(--fs-color-text);
+  --fs-incentives-title-size: var(--fs-text-size-1);
+  --fs-incentives-title-weight: var(--fs-text-weight-bold);
+  --fs-incentives-title-line-height: 1.42;
+  --fs-incentives-title-color: var(--fs-color-text);
 
   // Description
-  --fs-incentives-description-size        : var(--fs-incentives-title-size);
-  --fs-incentives-description-line-height : 1.14;
-  --fs-incentives-description-color       : var(--fs-incentives-title-color);
+  --fs-incentives-description-size: var(--fs-incentives-title-size);
+  --fs-incentives-description-line-height: 1.14;
+  --fs-incentives-description-color: var(--fs-incentives-title-color);
 
   // Incentive Icon
-  --fs-incentives-icon-color              : var(--fs-incentives-title-color);
+  --fs-incentives-icon-color: var(--fs-incentives-title-color);
 
   // --------------------------------------------------------
   // Structural Styles
@@ -50,19 +50,24 @@
       width: 1140px;
       max-width: 100%;
 
-      >li {
+      > li {
         width: 25%;
       }
     }
 
     @include media("<notebook") {
       display: block;
+      width: 100% !important; /* stylelint-disable-line declaration-no-important */
       padding: 0;
-      width: 100% !important;
 
-      >li {
+      > li {
         border-bottom: 1px solid #edeff1;
       }
+    }
+
+    @media (min-width: "375px") and (max-width: "1030px") {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -73,7 +78,7 @@
     justify-content: center;
     height: 250px;
 
-    >img {
+    > img {
       margin-bottom: 15px;
     }
 
@@ -82,10 +87,10 @@
     }
 
     @include media(">=notebook") {
-      //flex-direction: row;
+      // flex-direction: row;
 
       [data-fs-incentive-content] {
-        //margin-left: var(--fs-spacing-2);
+        // margin-left: var(--fs-spacing-2);
         text-align: left;
         text-align: center;
       }
@@ -104,12 +109,13 @@
 
   [data-fs-incentive-description] {
     display: block;
+
+    // white-space: nowrap;
+    margin: 12px 0;
     font-size: var(--fs-incentives-description-size);
     line-height: var(--fs-incentives-description-line-height);
     color: var(--fs-incentives-description-color);
-    //white-space: nowrap;
-    margin: 12px 0;
-    color: #575D5E;
+    color: #575d5e;
   }
 
   [data-fs-incentive-content] {
@@ -136,17 +142,21 @@
     li:not(:last-child) {
       padding-bottom: var(--fs-incentives-gap);
       margin-bottom: var(--fs-incentives-gap);
-      border-bottom: var(--fs-incentives-border-width) solid var(--fs-incentives-border-color);
+      border-bottom:
+        var(--fs-incentives-border-width) solid
+        var(--fs-incentives-border-color);
     }
   }
 
   &[data-fs-incentives-variant="horizontal"] {
     @include media(">=notebook") {
       li:not(:last-child) {
+        width: 25%;
         padding-right: var(--fs-incentives-gap);
         margin-right: var(--fs-incentives-gap);
-        border-right: var(--fs-incentives-border-width) solid var(--fs-incentives-border-color);
-        width: 25%;
+        border-right:
+          var(--fs-incentives-border-width) solid
+          var(--fs-incentives-border-color);
       }
     }
   }

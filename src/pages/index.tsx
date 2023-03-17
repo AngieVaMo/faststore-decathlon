@@ -9,13 +9,16 @@ import RenderPageSections from 'src/components/cms/RenderPageSections'
 import { getCMSPageDataByContentType } from 'src/cms/client'
 import type { ContentData } from '@vtex/client-cms'
 import { useSession } from 'src/sdk/session'
-import Newsletter from 'src/components/sections/Newsletter'
+// import Newsletter from 'src/components/sections/Newsletter'
 import BannerGif from 'src/components/sections/BannerGif/BannerGif'
 import LinksSection from 'src/components/sections/LinksSection/LinksSection'
 import LinksSectionJson from 'src/components/sections/LinksSection/LinksSectionJson.json'
 import ImgSection from 'src/components/sections/ImgSection/ImgSection'
 import imgSectionJson from 'src/components/sections/ImgSection/imgSectionJson.json'
-//import homeBanner from 'src/images/homeBanner.gif'
+import ProductShelf from 'src/components/sections/ProductShelf'
+import BannerImgText from 'src/components/sections/BannerImgText/BannerImgText'
+import ProductSlider from 'src/components/sections/BannerGif/productSlider'
+// import homeBanner from 'src/images/homeBanner.gif'
 
 export type Props = PageProps<
   HomePageQueryQuery,
@@ -35,9 +38,10 @@ function Page(props: Props) {
   const title = site?.siteMetadata?.title ?? ''
   const siteUrl = `${site?.siteMetadata?.siteUrl}`
 
-  {
-    console.log('index', cmsHome)
-  }
+  // {
+  //   console.log('index', cmsHome)
+  // }
+
   return (
     <>
       {/* SEO */}
@@ -81,30 +85,69 @@ function Page(props: Props) {
 
       <RenderPageSections sections={cmsHome?.sections} />
       <BannerGif
+        // eslint-disable-next-line node/global-require, @typescript-eslint/no-require-imports
         url={require('../../static/homeBanner.gif')}
         btnText="Descubre más"
         href="/"
         classBanner="1"
-      />
+      >
+        <ProductShelf title="" term="camisa" first={6} />
+      </BannerGif>
+      <LinksSection textArray={LinksSectionJson} />
+
       <BannerGif
+        // eslint-disable-next-line node/global-require, @typescript-eslint/no-require-imports
         url={require('../../static/spotify.gif')}
         btnText="¡Dale play!"
         href="/"
-        icon="spotify"
+        // icon="spotify"
         classBanner="2"
-      />
+      >
+        <ProductSlider first={10} term="deporte" />
+      </BannerGif>
       <BannerGif
+        // eslint-disable-next-line node/global-require, @typescript-eslint/no-require-imports
         url={require('../../static/ows.gif')}
         btnText="Compra aquí"
         href="/"
         classBanner="3"
+      >
+        <ProductSlider first={10} term="mujer" />
+      </BannerGif>
+      <BannerImgText
+        bannerInfo={[
+          {
+            imgDescription: 'Tenis deportivos',
+            url: 'https://itglobers.vtexassets.com/arquivos/banner-tenis-decathlon.png',
+            href: '/',
+            content: 'Tenis deportivos',
+          },
+          {
+            imgDescription: 'Maletas y morrales',
+            url: 'https://itglobers.vtexassets.com/arquivos/banner-morrales-decathlon.png',
+            href: '/',
+            content: 'Maletas y morrales',
+          },
+          {
+            imgDescription: 'Pantalones',
+            url: 'https://itglobers.vtexassets.com/arquivos/banner-pantalones-decathlon.png',
+            href: '/',
+            content: 'Pantalones',
+          },
+          {
+            imgDescription: 'Chaquetas',
+            url: 'https://itglobers.vtexassets.com/arquivos/banner-chaquetas-decathlon.png',
+            href: '/',
+            content: 'Chaquetas',
+          },
+        ]}
       />
-      <LinksSection textArray={LinksSectionJson} />
+      {/* <ProductShelf title="texto" term="hogar" /> */}
       <ImgSection infoArray={imgSectionJson} />
-      <Newsletter
+      {/* <Newsletter
         title="Get News and Special Offers!"
         description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
-      />
+      /> */}
     </>
   )
 }

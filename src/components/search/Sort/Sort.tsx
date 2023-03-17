@@ -9,7 +9,8 @@ const OptionsMap = {
   name_desc: 'Name, Z-A',
   release_desc: 'Release date',
   discount_desc: 'Discount',
-  score_desc: 'Relevance',
+  // score_desc: 'Relevance',
+  score_desc: 'Más Relevante',
 }
 
 const keys = Object.keys(OptionsMap) as Array<keyof typeof OptionsMap>
@@ -21,7 +22,8 @@ function Sort() {
     <Select
       id="sort-select"
       className="sort / text__title-mini-alt"
-      label="Sort by"
+      // label="Sort by"
+      label="ORDENAR POR:"
       options={OptionsMap}
       onChange={(e) => {
         const sort = keys[e.target.selectedIndex]

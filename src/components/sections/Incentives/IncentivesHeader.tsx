@@ -2,7 +2,7 @@ import Incentives from './Incentives'
 import Section from '../Section'
 
 interface Incentive {
-  icon: string
+  icon?: string
   title?: string
   firstLineText: string
   secondLineText?: string

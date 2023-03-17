@@ -1,7 +1,7 @@
-import { Suspense, useRef, useState } from 'react'
+import { Suspense, useState } from 'react'
 import CartToggle from 'src/components/cart/CartToggle'
 import SearchInput from 'src/components/search/SearchInput'
-//import type { SearchInputRef } from 'src/components/search/SearchInput'
+// import type { SearchInputRef } from 'src/components/search/SearchInput'
 import Button, {
   ButtonSignIn,
   ButtonSignInFallback,
@@ -17,14 +17,13 @@ import useScrollDirection from 'src/sdk/ui/useScrollDirection'
 
 import styles from './navbar.module.scss'
 import NavbarSlider from './NavbarSlider'
-import NavLinks from './NavLinks'
 import Menu from './Menu/Menu'
 import MenuItems from './Menu/MenuItems'
 
 function Navbar() {
   const scrollDirection = useScrollDirection()
   const { openNavbar, navbar: displayNavbar } = useUI()
-  //const searchMobileRef = useRef<SearchInputRef>(null)
+  // const searchMobileRef = useRef<SearchInputRef>(null)
 
   const [searchExpanded, setSearchExpanded] = useState(false)
 
@@ -71,7 +70,7 @@ function Navbar() {
                 icon={<Icon name="CaretLeft" width={32} height={32} />}
                 onClick={() => {
                   setSearchExpanded(false)
-                  //searchMobileRef.current?.resetSearchInput()
+                  // searchMobileRef.current?.resetSearchInput()
                 }}
               />
             )}

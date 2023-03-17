@@ -1,7 +1,7 @@
 import type { AccordionProps } from '@faststore/ui'
 import { Accordion as UIAccordion } from '@faststore/ui'
 import { forwardRef } from 'react'
-import Toggle from '../Toggle'
+// import Toggle from '../Toggle'
 
 import styles from './accordion.module.scss'
 

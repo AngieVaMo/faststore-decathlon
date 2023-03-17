@@ -10,7 +10,6 @@ import { useNewsletter } from 'src/sdk/newsletter/useNewsletter'
 
 import Section from '../Section'
 import styles from './newsletter.module.scss'
-import LinkUUnidades from 'src/components/ui/Link/LinkUUnidades'
 
 export interface NewsletterProps
   extends Omit<ComponentPropsWithRef<'form'>, 'title' | 'onSubmit'> {

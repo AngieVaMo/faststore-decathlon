@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { Button } from '@faststore/ui'
 import type { ButtonProps } from '@faststore/ui'
 
@@ -19,6 +19,7 @@ const DropdownButton = forwardRef<HTMLButtonElement, DropdownButtonProps>(
   ) {
     const { toggle, dropdownButtonRef, isOpen, id } = useDropdown()
 
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     useImperativeHandle(ref, () => dropdownButtonRef!.current!, [
       dropdownButtonRef,
     ])
