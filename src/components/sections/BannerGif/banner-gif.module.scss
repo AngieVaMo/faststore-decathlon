@@ -2,12 +2,7 @@
 
 .fs-banner-gif {
   display: flex;
-
-  [data-fs-banner-gif-image] {
-    display: flex;
-    align-self: center;
-    padding-left: 30px;
-  }
+  margin-top: 20px;
 
   section {
     margin-top: 0;
@@ -88,6 +83,12 @@
   &[data-fs-banner-gif="1"] {
     padding-bottom: 20px;
 
+    [data-fs-banner-gif-image] {
+      display: flex;
+      align-self: center;
+      padding-left: 30px;
+    }
+
     > section {
       padding-bottom: 0;
     }
@@ -118,7 +119,11 @@
   }
 
   &[data-fs-banner-gif="2"] {
+    justify-content: space-evenly;
+    margin: 20px 20px 0;
+
     [data-fs-banner-gif-image] {
+      display: flex;
       width: 25%;
 
       > img {
@@ -141,71 +146,147 @@
 
     [data-fs-banner-gif-link] {
       position: relative;
-      top: -70px;
+      top: 370px;
+      left: -235px;
+      padding: 0 8px;
       text-align: center;
+      white-space: nowrap;
     }
 
     [data-fs-banner-gif-slider] {
-      width: 70vw;
+      button {
+        display: none !important; /* stylelint-disable-line declaration-no-important */
+      }
 
-      [data-fs-product-shelf-items] {
-        gap: 0.75rem;
-        overflow-x: unset;
+      @include media(">notebook") {
+        align-self: center;
+        width: 860px;
+        height: 305px;
+      }
 
-        // justify-content: end;
+      > h2 {
+        font-size: 29px;
+        font-weight: 600;
+        color: #003a61;
+      }
 
-        li {
-          width: 30%;
-          min-height: fit-content;
+      [data-fs-banner-gif-slider-item] {
+        width: 20%;
+        min-height: fit-content;
 
-          // height: 240px;
+        [data-fs-product-card] {
+          width: 25%;
+          box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
 
-          [data-fs-product-card] {
+          &:hover {
+            background-color: transparent;
+            border: none;
+            border-color: unset;
             box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
-
-            &:hover {
-              background-color: transparent;
-              border: none;
-              border-color: unset;
-              box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
-            }
-
-            [data-product-card-image] {
-              justify-self: center;
-              width: 120px;
-              height: auto;
-            }
-
-            [data-product-card-content] {
-              [data-fs-product-card-title] {
-                font-size: 14px;
-                text-align: center;
-
-                // white-space: nowrap;
-              }
-
-              [data-fs-product-card-prices] {
-                justify-content: center;
-                width: 100%;
-              }
-            }
           }
 
-          [data-testid="list-price"] {
-            display: none;
+          [data-product-card-image] {
+            justify-self: center;
+            width: 120px;
+            height: auto;
           }
 
-          [data-fs-badge] {
-            display: none;
+          [data-product-card-content] {
+            [data-fs-product-card-title] {
+              font-size: 14px;
+              text-align: center;
+            }
+
+            [data-fs-product-card-prices] {
+              justify-content: center;
+              width: 100%;
+            }
           }
+        }
+
+        [data-testid="list-price"] {
+          display: none;
+        }
+
+        [data-fs-badge] {
+          display: none;
         }
       }
     }
   }
 
   &[data-fs-banner-gif="3"] {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    margin: 20px 20px 0;
+
+    [data-fs-banner-gif-image] {
+      display: flex;
+
+      > img {
+        width: 100%;
+      }
+    }
+
     [data-fs-banner-gif-slider] {
-      width: 75vw;
+      button {
+        display: none !important; /* stylelint-disable-line declaration-no-important */
+      }
+
+      @include media(">notebook") {
+        align-self: center;
+        width: 860px;
+        height: 305px;
+      }
+
+      > h2 {
+        font-size: 29px;
+        font-weight: 600;
+        color: #003a61;
+      }
+
+      [data-fs-banner-gif-slider-item] {
+        width: 20%;
+        min-height: fit-content;
+
+        [data-fs-product-card] {
+          width: 25%;
+          box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+
+          &:hover {
+            background-color: transparent;
+            border: none;
+            border-color: unset;
+            box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+          }
+
+          [data-product-card-image] {
+            justify-self: center;
+            width: 120px;
+            height: auto;
+          }
+
+          [data-product-card-content] {
+            [data-fs-product-card-title] {
+              font-size: 14px;
+              text-align: center;
+            }
+
+            [data-fs-product-card-prices] {
+              justify-content: center;
+              width: 100%;
+            }
+          }
+        }
+
+        [data-testid="list-price"] {
+          display: none;
+        }
+
+        [data-fs-badge] {
+          display: none;
+        }
+      }
     }
 
     [data-fs-banner-gif-link-button] {
@@ -223,8 +304,61 @@
 
     [data-fs-banner-gif-link] {
       position: relative;
-      top: -70px;
+      top: 240px;
+      left: 120px;
+      padding: 0 8px;
       text-align: center;
+      white-space: nowrap;
+    }
+  }
+}
+
+.slick-list {
+  gap: 0.75rem;
+
+  [data-fs-banner-gif-slider-item] {
+    width: 15%;
+    min-height: fit-content;
+
+    // height: 240px;
+
+    [data-fs-product-card] {
+      box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+
+      &:hover {
+        background-color: transparent;
+        border: none;
+        border-color: unset;
+        box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+      }
+
+      [data-product-card-image] {
+        justify-self: center;
+        width: 120px;
+        height: auto;
+      }
+
+      [data-product-card-content] {
+        [data-fs-product-card-title] {
+          font-size: 14px;
+          text-align: center;
+
+          // white-space: nowrap;
+        }
+
+        [data-fs-product-card-prices] {
+          justify-content: center;
+          width: 100%;
+        }
+      }
+    }
+
+    [data-testid="list-price"] {
+      display: none;
+    }
+
+    [data-fs-badge] {
+      display: none;
     }
   }
 }

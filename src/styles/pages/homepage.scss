@@ -1,2 +1,16 @@
 // Sections
 @import "src/components/sections/Section/section.scss";
+
+.slick-list {
+  height: 300px;
+
+  [data-fs-product-card] {
+    height: 250px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+  }
+}
+
+.slick-track {
+  left: 5px;
+}

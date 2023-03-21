@@ -13,7 +13,7 @@ body {
   background: var(--fs-body-bkg);
 
   > iframe {
-    background-color: transparent !important;
+    background-color: transparent !important; /* stylelint-disable-line declaration-no-important */
   }
 }
 
@@ -37,11 +37,13 @@ main,
 .layout__content-full {
   width: 100%;
   padding-top: var(--fs-spacing-4);
-  //padding-bottom: var(--fs-spacing-4);
+
+  // padding-bottom: var(--fs-spacing-4);
 
   @include media(">=notebook") {
     padding-top: var(--fs-grid-padding);
-    //padding-bottom: var(--fs-grid-padding);
+
+    // padding-bottom: var(--fs-grid-padding);
   }
 }
 
@@ -84,22 +86,21 @@ main,
 }
 
 .layout__topHeader {
-  display: flex !important;
+  display: flex !important; /* stylelint-disable-line declaration-no-important */
   justify-content: center;
+  height: 25px !important; /* stylelint-disable-line declaration-no-important */
   padding-top: 4px;
   padding-bottom: 4px;
   margin: 0 auto;
   font-size: 15px;
   color: #fff;
-  background-color: #0082C3;
+  background-color: #0082c3;
 
-  > div{
+  > div {
     width: 250px;
   }
 
   > button {
-    display: none !important;
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 }
-
-
