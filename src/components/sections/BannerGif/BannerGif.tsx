@@ -26,20 +26,22 @@ function BannerGif({
   return (
     <div>
       <Banner className={styles.fsBannerGif} data-fs-banner-gif={classBanner}>
-        <BannerImage data-fs-banner-gif-image>
-          <img src={url.default} alt={imgDescription} />
-        </BannerImage>
-        <BannerLink data-fs-banner-gif-link>
-          <BannerButton
-            data-fs-banner-gif-link-button
-            //  data-fs-banner-gif={classBanner}
-            variant="primary"
-            href={href}
-            icon={icon}
-          >
-            {btnText}
-          </BannerButton>
-        </BannerLink>
+        <div data-fs-banner-gif-img-link>
+          <BannerImage data-fs-banner-gif-image>
+            <img src={url.default} alt={imgDescription} />
+          </BannerImage>
+          <BannerLink data-fs-banner-gif-link>
+            <BannerButton
+              data-fs-banner-gif-link-button
+              //  data-fs-banner-gif={classBanner}
+              variant="primary"
+              href={href}
+              icon={icon}
+            >
+              {btnText}
+            </BannerButton>
+          </BannerLink>
+        </div>
         {children}
       </Banner>
     </div>
