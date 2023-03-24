@@ -66,7 +66,7 @@ const Badge = ({
         />
       )}
       <div data-fs-badge-wrapper>
-        <span>{children}</span>
+        <span>{`(${children})`}</span>
       </div>
     </UIBadge>
   )

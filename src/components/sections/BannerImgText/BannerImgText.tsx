@@ -17,7 +17,7 @@ function BannerImgText({ bannerInfo }: Props) {
   return (
     <Banner className={styles.fsBannerImgText}>
       {bannerInfo?.map(({ imgDescription, url, href, content }, index) => (
-        <div key={index}>
+        <div key={index} data-fs-banner-img-text-container>
           <BannerLink data-fs-banner-img-text-link>
             <a href={href}>
               <BannerImage data-fs-banner-img-text-i>

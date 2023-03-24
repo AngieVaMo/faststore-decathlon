@@ -24,8 +24,8 @@ function BannerGif({
   children,
 }: Props) {
   return (
-    <div>
-      <Banner className={styles.fsBannerGif} data-fs-banner-gif={classBanner}>
+    <Banner className={styles.fsBannerGif} data-fs-banner-gif={classBanner}>
+      <div data-fs-banner-gif-img-link>
         <BannerImage data-fs-banner-gif-image>
           <img src={url.default} alt={imgDescription} />
         </BannerImage>
@@ -40,9 +40,9 @@ function BannerGif({
             {btnText}
           </BannerButton>
         </BannerLink>
-        {children}
-      </Banner>
-    </div>
+      </div>
+      {children}
+    </Banner>
   )
 }
 

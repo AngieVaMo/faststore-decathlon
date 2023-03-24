@@ -79,7 +79,9 @@ function ProductGallery({ title, searchTerm }: Props) {
             loading={!data}
             data-fs-product-listing-results-count-skeleton
           >
-            <h2 data-testid="total-product-count">{totalCount} Results</h2>
+            <h2 data-testid="total-product-count">
+              {totalCount} Resultados encontrados
+            </h2>
           </Skeleton>
         </div>
 

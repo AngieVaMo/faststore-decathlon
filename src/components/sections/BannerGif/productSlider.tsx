@@ -17,9 +17,6 @@ export default function ProductSlider({
 
   const productEdges = products?.edges ?? []
 
-  // eslint-disable-next-line no-console
-  console.log('PRODUCTSQUERY: ', productEdges)
-
   const settings = {
     dots: true,
     infinite: true,
@@ -28,7 +25,32 @@ export default function ProductSlider({
     autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
-    cssEase: 'linear',
+    // cssEase: 'linear',
+    useCSS: true,
+    className: 'ProductSlider',
+    responsive: [
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   }
 
   return (
