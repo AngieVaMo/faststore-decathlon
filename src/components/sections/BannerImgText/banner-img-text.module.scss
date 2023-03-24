@@ -3,13 +3,8 @@
 .fs-banner-img-text {
   display: flex;
   width: 100%;
-  margin: 20px 0;
-
-  @include media("<tablet") {
-    flex: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-  }
+  max-width: 1420px;
+  margin: 20px auto;
 
   [data-fs-banner-img-text-container] {
     width: 25%;
@@ -30,6 +25,17 @@
       @include media("<tablet") {
         font-size: 14px;
       }
+    }
+  }
+
+  @include media("<tablet") {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+
+    [data-fs-banner-img-text-container] {
+      width: 100%;
+      padding: 10px;
     }
   }
 }

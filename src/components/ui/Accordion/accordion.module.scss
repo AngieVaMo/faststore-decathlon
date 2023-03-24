@@ -6,16 +6,16 @@
   // --------------------------------------------------------
 
   // Item
-  --fs-accordion-item-border-bottom-width           : var(--fs-border-width);
-  --fs-accordion-item-border-bottom-color           : var(--fs-border-color-light);
+  --fs-accordion-item-border-bottom-width: var(--fs-border-width);
+  --fs-accordion-item-border-bottom-color: var(--fs-border-color-light);
 
   // Item Button
-  --fs-accordion-item-button-padding                : var(--fs-spacing-3) 0;
-  --fs-accordion-item-button-color                  : var(--fs-color-text);
-  --fs-accordion-item-button-bkg-color              : transparent;
+  --fs-accordion-item-button-padding: var(--fs-spacing-3) 0;
+  --fs-accordion-item-button-color: var(--fs-color-text);
+  --fs-accordion-item-button-bkg-color: transparent;
 
   // Item Panel
-  --fs-accordion-item-panel-padding-bottom          : var(--fs-spacing-4);
+  --fs-accordion-item-panel-padding-bottom: var(--fs-spacing-4);
 
   // --------------------------------------------------------
   // Structural Styles
@@ -26,7 +26,11 @@
   justify-content: space-around;
 
   [data-fs-accordion-item] {
-    border-bottom: var(--fs-accordion-item-border-bottom-width) solid var(--fs-accordion-item-border-bottom-color);
+    border-right: none;
+    border-bottom:
+      var(--fs-accordion-item-border-bottom-width) solid
+      var(--fs-accordion-item-border-bottom-color);
+    border-left: none;
 
     @include media(">=notebook") {
       &:last-child {
@@ -43,16 +47,14 @@
     padding: var(--fs-accordion-item-button-padding);
     padding-right: 27px;
     padding-left: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
     color: var(--fs-accordion-item-button-color);
+    color: #4e4e4e;
     cursor: pointer;
     background-color: var(--fs-accordion-item-button-bkg-color);
     border: 0;
-
-    color: #4e4e4e;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
-
   }
 
   [data-fs-accordion-item-button-icon] {
@@ -62,7 +64,8 @@
       display: none;
     }
 
-    [data-icon="expanded"], [data-icon="collapsed"] {
+    [data-icon="expanded"],
+    [data-icon="collapsed"] {
       display: initial;
     }
   }

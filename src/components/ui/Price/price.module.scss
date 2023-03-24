@@ -4,12 +4,12 @@
   // --------------------------------------------------------
 
   // Listing
-  --fs-price-listing-color           : var(--fs-color-text-light);
-  --fs-price-listing-text-decoration : line-through;
+  --fs-price-listing-color: var(--fs-color-text-light);
+  --fs-price-listing-text-decoration: line-through;
 
   // Spot
-  --fs-price-spot-margin-left        : var(--fs-spacing-1);
-  --fs-price-spot-font-weight        : var(--fs-text-weight-bold);
+  --fs-price-spot-margin-left: var(--fs-spacing-1);
+  --fs-price-spot-font-weight: var(--fs-text-weight-bold);
 
   // --------------------------------------------------------
   // Variants Styles
@@ -21,7 +21,7 @@
   }
 
   &[data-variant="spot"] {
-    margin-left: var(--fs-price-spot-margin-left);
+    // margin-left: var(--fs-price-spot-margin-left);
     font-weight: var(--fs-price-spot-font-weight);
   }
 }

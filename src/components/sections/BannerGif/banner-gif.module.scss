@@ -2,14 +2,12 @@
 
 .fs-banner-gif {
   display: flex;
+  max-width: 1420px;
+  margin: 0 auto;
   margin-top: 20px;
 
-  section {
-    margin-top: 0;
-
-    h2 {
-      display: none;
-    }
+  @include media(">notebook") {
+    width: 1420px;
   }
 
   [data-fs-product-shelf] {
@@ -107,9 +105,18 @@
       position: relative;
       display: flex;
 
+      section {
+        margin-top: 0;
+
+        h2 {
+          display: none;
+        }
+      }
+
       [data-fs-banner-gif-image] {
         display: flex;
         align-self: center;
+        width: 100%;
         padding-left: 30px;
 
         @include media("<notebook") {
@@ -124,11 +131,19 @@
 
       [data-fs-banner-gif-link] {
         position: absolute;
-        top: 72%;
-        left: 70%;
+        top: 73%;
+        left: 95%;
+        display: flex;
+        justify-content: flex-end;
         width: fit-content;
         padding: 0 8px;
         white-space: nowrap;
+      }
+
+      @include media("<notebook") {
+        section {
+          margin-top: 20px;
+        }
       }
     }
 
@@ -151,8 +166,9 @@
   }
 
   &[data-fs-banner-gif="2"] {
-    justify-content: space-evenly;
-    margin: 20px 20px 0;
+    justify-content: space-between;
+
+    // margin: 20px 20px 0;
 
     @include media("<notebook") {
       display: block;
@@ -176,7 +192,9 @@
       [data-fs-banner-gif-link] {
         position: absolute;
         top: 85%;
-        left: 30%;
+        left: 49%;
+        display: flex;
+        justify-content: center;
         padding: 0 8px;
         text-align: center;
         white-space: nowrap;
@@ -264,8 +282,9 @@
 
   &[data-fs-banner-gif="3"] {
     flex-direction: row-reverse;
-    justify-content: space-evenly;
-    margin: 20px 20px 0;
+    justify-content: space-between;
+
+    // margin: 20px 20px 0;
 
     @include media("<notebook") {
       display: block;
@@ -288,8 +307,10 @@
 
       [data-fs-banner-gif-link] {
         position: absolute;
-        top: 75%;
-        left: 30%;
+        top: 80%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
         padding: 0 8px;
         text-align: center;
         white-space: nowrap;
